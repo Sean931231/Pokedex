@@ -1,8 +1,13 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <b-button variant="outline-primary" router-link to="/">
+        Home
+      </b-button>
+       |
+      <b-button variant="outline-primary" router-link to="/about">
+        About
+      </b-button>
     </div>
     <router-view/>
   </div>
@@ -25,7 +30,7 @@
     color: #2c3e50;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #bb3636;
     }
   }
 }

@@ -1,29 +1,28 @@
 <template>
   <div id="nav">
-    <b-navbar toggleable variant="faded" type="light">
-      <b-navbar-brand tag="h1" href="#/about">Pokedex</b-navbar-brand>
+    <b-navbar toggleable="lg" type="dark" fixed="top" class="mb-3">
+      <!-- navbar brand -->
+      <b-navbar-brand class="lg">
+        <img src="../assets/svg/pokeball-2.svg" class="d-inline-block align-top logo">
+        Pokedex
+      </b-navbar-brand>
 
-      <b-navbar-toggle target="navbar-toggle-collapse">
-      <template v-slot:default="{ expanded }">
-        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-        <b-icon v-else icon="chevron-bar-down"></b-icon>
-      </template>
+      <b-navbar-toggle target="nav-collapse">
+        <!-- navbar icon -->
+        <template v-slot:default="{ expanded }">
+          <b-icon v-if="expanded" icon="toggle-on" class="iconColor"></b-icon>
+          <b-icon v-else icon="toggle-off" class="iconColor"></b-icon>
+        </template>
       </b-navbar-toggle>
 
-      <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <b-nav-item href="#">Link 1</b-nav-item>
-        <b-nav-item href="#">Link 2</b-nav-item>
-        <b-nav-item href="#" disabled>Disabled</b-nav-item>
-      </b-navbar-nav>
+      <b-collapse id="nav-collapse" is-nav>
+        <!-- navbar content -->
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item :to="'/'">Home</b-nav-item>
+          <b-nav-item :to="'/pokemon'">Pokemon</b-nav-item>
+          <b-nav-item :to="'/about'">About</b-nav-item>
+        </b-navbar-nav>
       </b-collapse>
-
-      <!-- <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav>
-            <b-nav-item router-link to="/">Home</b-nav-item>
-            <b-nav-item router-link to="/about">About</b-nav-item>
-          </b-navbar-nav>
-        </b-collapse> -->
     </b-navbar>
   </div>
 </template>
@@ -35,16 +34,5 @@
 </script>
 
 <style lang="scss" scoped>
-// #nav {
-//     padding: 30px;
-
-//     a {
-//         font-weight: bold;
-//         color: #2c3e50;
-
-//         &.router-link-exact-active {
-//         color: #bb3636;
-//         }
-//     }
-// }
+  @import "../styles/sideNavBar.scss";
 </style>

@@ -1,0 +1,27 @@
+#nav {
+  .navbar {
+    background-color: #ee1515;
+
+    .logo {
+      width: 30px;
+    }
+
+    .navbar-toggler{
+      border-color: #000;
+
+      .iconColor {
+        color: #fff;
+      }
+    }
+
+    a {
+      color: #2c3e50;
+
+      &.router-link-exact-active {
+        color: #ffffff;
+        // font-weight: bold;
+      }
+    }
+  }
+
+}

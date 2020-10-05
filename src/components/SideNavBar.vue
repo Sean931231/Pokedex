@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-    <b-navbar toggleable="lg" type="dark" fixed="top" class="mb-3">
+    <b-navbar toggleable="lg" type="dark" fixed="top">
       <!-- navbar brand -->
       <b-navbar-brand class="lg">
         <img src="../assets/svg/pokeball-2.svg" class="d-inline-block align-top logo">

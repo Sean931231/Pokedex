@@ -1,7 +1,10 @@
 <template>
   <div>
     <p> pokemon Page</p>
-    <img :src="pokeimg" />
+    <h1> {{ this.$route.query.region }} </h1>
+    <div v-for="(pokemon, index) in pokemons" :key="pokemon.key">
+      {{ index +1 }} ) {{ pokemon.name }}
+    </div>
   </div>
 </template>
 
@@ -13,7 +16,7 @@
     },
     data() {
       return {
-        pokemon: 'charmander',
+        pokemons: '',
         pokeimg: ''
       }
     },
@@ -23,14 +26,29 @@
     },
 
     methods: {
+      getPageInfo() {
+        console.log("this is pokemon page!");
+      },
+
       getPokemon() {
-        this.$api
-          .get("https://pokeapi.co/api/v2/pokemon/"+this.pokemon)
-          .then(response => {
-            // console.log(response.data);
-            console.log(response.data.sprites.other);
-            this.pokeimg = response.data.sprites.other.dream_world.front_default;
-          })
+        if (this.$route.query != "") {
+          this.$api
+            .get("https://pokeapi.co/api/v2/pokemon?limit=151")
+            .then(response => {
+                console.log("1");
+              console.log(response.data.results);
+              this.pokemons = response.data.results;
+            })
+        } else {
+          let genId = this.$route.query.generation;
+          this.$api
+              .get("https://pokeapi.co/api/v2/pokedex/"+genId+"/")
+              .then(response => {
+                console.log("2");
+                console.log(response.data);
+                // this.pokemons = response.data.pokemon_species;
+              })
+        }
       }
     },
   }

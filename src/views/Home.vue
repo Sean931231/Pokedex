@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <b-container>
-      <b-row class="region mt-4">
-        <b-col md="4" lg="3" v-for="region in regions" :key="region.key">
+      <b-row class="region mt-4 mb-4">
+        <b-col md="4" lg="3" v-for="(region, index) in regions" :key="region.key">
           <b-card-group deck>
             <b-card
               :title="region.name"
@@ -13,7 +13,7 @@
               <b-card-text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </b-card-text>
-              <b-button :to="'/pokemon'" variant="primary">Let's Go</b-button>
+              <b-button @click="town(index+1, region.name)" variant="primary">Let's Go</b-button>
             </b-card>
           </b-card-group>
         </b-col>
@@ -43,8 +43,18 @@ export default {
           .request("https://pokeapi.co/api/v2/region/", {id: 1})
           .then(response => {
             this.regions = response.data.results;
-            console.log(this.regions.name);
+            console.log(this.regions);
           })
+    },
+
+    town(index, region) {
+      this.$router.push ({
+        name: 'Town',
+        query: {
+          generation: index,
+          region: region
+        }
+      })
     }
   },
 }

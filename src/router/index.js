@@ -21,6 +21,13 @@ const routes = [
     }
   },
   {
+    path: '/town',
+    name: 'Town',
+    component: function () {
+      return import(/* webpackChunkName: "pokemon" */ '../views/Town.vue')
+    }
+  },
+  {
     path: '/pokemon',
     name: 'Pokemon',
     // route level code-splitting

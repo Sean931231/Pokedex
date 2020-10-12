@@ -1,13 +1,8 @@
 <template>
   <div id="town">
-    <b-container fluid>
-      <b-col>
-        <b-row>
-          <p> {{ this.TownUpperCase }} </p>
-        </b-row>
-      </b-col>
+    <b-container class="town-container">
+      <h1> {{ this.TownUpperCase }} </h1>
     </b-container>
-     <b-img :src='"../assets/regionmap/"+ this.$route.query.region +".jpg"' fluid alt="Responsive image"></b-img>
   </div>
 </template>
 
@@ -24,18 +19,22 @@
       }
     },
     mounted () {
-      this.getPageName();
-      this.getTownName();
+      this.getGenInfo();
     },
     methods: {
-      getPageName() {
-        console.log("this is town page");
-        this.pageid = this.$route.query.id;
-        // console.log(this.pageid);
+      getGenInfo() {
+        let regionIndex = this.$route.query.id;
+        this.$api
+            .request('https://pokeapi.co/api/v2/region/'+regionIndex+'/',{})
+            .then(response => {
+              console.log (response.data);
+              this.getTownNameUpperCase(response.data.name);
+              return false;
+            })
       },
 
-      getTownName() {
-        let town = this.$route.query.region;
+      getTownNameUpperCase(townName) {
+        let town = townName;
         this.TownUpperCase = town.charAt(0).toUpperCase() + town.slice(1)
       }
     },

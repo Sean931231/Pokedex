@@ -42,9 +42,7 @@
               this.pokemons = response.data.results;
               this.pokemons.forEach((item, index) => {
                 this.getFirst(index);
-                console.log(index);
               });
-              console.log(this.pokemons);
             })
         } else {
           let genId = this.$route.query.generation;

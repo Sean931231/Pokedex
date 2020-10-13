@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <b-container fluid>
+    <b-container>
       <b-row class="region pt-2 mb-4">
         <b-col md="4" lg="3" v-for="(region, index) in regions" :key="region.key">
           <b-card-group deck>
@@ -10,10 +10,15 @@
               img-alt="Region Map"
               img-top
               class="mb-3">
+
               <b-card-text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
               </b-card-text>
-              <b-button @click="town(index+1, region.name)" variant="primary">Tour</b-button>
+              <div class="button-position">
+                <img src="../assets/svg/pokeball-2.svg" class="rolling-ball"/>
+                <b-button @click="tour(index+1)" variant="primary">Tour</b-button>
+              </div>
+
             </b-card>
           </b-card-group>
         </b-col>
@@ -30,8 +35,7 @@ export default {
   },
   data() {
     return {
-      regions: [],
-      items: 10
+      regions: []
     }
   },
   mounted () {
@@ -40,14 +44,14 @@ export default {
   methods: {
     init() {
       this.$api
-          .request("https://pokeapi.co/api/v2/region/", {id: 1})
+          .request("https://pokeapi.co/api/v2/region/")
           .then(response => {
             this.regions = response.data.results;
             // console.log(this.regions);
           })
     },
 
-    town(index, region) {
+    tour(index, region) {
       this.$router.push ({
         name: 'Town',
         query: {
@@ -59,6 +63,6 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "../styles/home.scss";
 </style>

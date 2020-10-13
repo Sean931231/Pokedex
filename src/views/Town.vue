@@ -1,5 +1,5 @@
 <template>
-  <div id="town">
+  <div class="town">
     <b-container class="town-container">
       <h1> {{ this.TownUpperCase }} </h1>
     </b-container>
@@ -25,7 +25,7 @@
       getGenInfo() {
         let regionIndex = this.$route.query.id;
         this.$api
-            .request('https://pokeapi.co/api/v2/region/'+regionIndex+'/',{})
+            .request('https://pokeapi.co/api/v2/region/'+regionIndex+'/')
             .then(response => {
               console.log (response.data);
               this.getTownNameUpperCase(response.data.name);
@@ -41,6 +41,6 @@
   }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @import "../styles/town.scss"
 </style>

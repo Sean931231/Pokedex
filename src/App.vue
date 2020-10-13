@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <Navbar />
-    <b-container class="content">
+    <Navbar title="PoKedex"/>
+    <b-container fluid class="content">
       <router-view />
     </b-container>
   </div>
@@ -11,7 +11,7 @@ import Navbar from '@/components/SideNavBar.vue'
 export default {
   components: {
     Navbar
-  }
+  },
 }
 </script>
 <style lang="scss">

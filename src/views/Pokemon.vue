@@ -1,11 +1,11 @@
 <template>
-  <div>
+  <div class="pokemon">
     <p> pokemon Page</p>
     <h1> {{ this.$route.query.region }} </h1>
     <div v-for="(pokemon, index) in pokemons" :key="pokemon.key">
       {{ index +1 }} ) {{ pokemon.name }}
 
-      <img :src="pokemon.img" />
+      <b-img :src="pokemon.img"> </b-img>
     </div>
   </div>
 </template>
@@ -28,10 +28,6 @@
     },
 
     methods: {
-      getPageInfo() {
-        console.log("this is pokemon page!");
-      },
-
       getPokemon() {
         if (this.$route.query != "") {
           this.$api
@@ -60,7 +56,7 @@
         this.$api
             .get(`https://pokeapi.co/api/v2/pokemon/${index+1}`)
             .then(response => {
-                this.pokemons[index].img = response.data.sprites.other['official-artwork'].front_default;
+              this.pokemons[index].img = response.data.sprites.other['official-artwork'].front_default;
             })
       }
     },
@@ -69,6 +65,6 @@
   }
 </script>
 
-<style lang="scss" scoped>
-
+<style lang="scss">
+  @import "../styles/pokemon.scss";
 </style>

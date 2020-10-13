@@ -17,6 +17,7 @@ export default {
   },
   methods: {
     demoLearn() {
+      console.log("situation 1: ");
       const aa = {
         a: 1,
         b: 2,
@@ -27,6 +28,8 @@ export default {
         d: 2,
       };
       console.log({...aa,...bb});
+
+      console.log("situation 2: ");
       const a = [1,2,3,4];
       const b = [4,5,6];
       let c = [];

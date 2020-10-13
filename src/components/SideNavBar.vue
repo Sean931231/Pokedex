@@ -4,7 +4,7 @@
       <!-- navbar brand -->
       <b-navbar-brand class="lg">
         <img src="../assets/svg/pokeball-2.svg" class="d-inline-block align-top logo">
-        Pokedex
+        {{ title }}
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse">
@@ -29,10 +29,14 @@
 
 <script>
     export default {
-
+      props: {
+        title: {
+          type: String,
+        },
+      },
     }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "../styles/sideNavBar.scss";
 </style>

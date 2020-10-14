@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <b-container>
-      <b-row class="region pt-2 mb-4">
+      <b-row class="region pt-4 mb-4">
         <b-col md="4" lg="3" v-for="(region, index) in regions" :key="region.key">
           <b-card-group deck>
             <b-card
@@ -15,7 +15,7 @@
               </b-card-text> -->
               <div class="button-position">
                 <img src="../assets/svg/pokeball-2.svg" class="rolling-ball"/>
-                <b-button @click="tour(index+1)" variant="primary">Tour</b-button>
+                <b-button @click="tour(index+1)" variant="primary" class="tour-button">Tour</b-button>
               </div>
             </b-card>
           </b-card-group>

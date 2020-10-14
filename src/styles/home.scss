@@ -1,6 +1,5 @@
 .home {
   .card {
-    overflow: hidden;
     box-shadow:
       0 2.8px 2.2px rgba(0, 0, 0, 0.034),
       0 6.7px 5.3px rgba(0, 0, 0, 0.048),
@@ -20,20 +19,12 @@
     .button-position {
       position: relative;
       width: 100%;
-      // background-color: black;
 
       .rolling-ball {
         position: absolute;
         right: 0;
         width: 40px;
         height: 40px;
-        transform: rotate(690deg);
-
-        -moz-transition:all 2s ease;
-        -webkit-transition:all 2s ease;
-        -o-transition:all 2s ease;
-        -ms-transition:all 2s ease;
-        transition:all 2s ease;
       }
     }
   }
@@ -41,38 +32,70 @@
 
 @media only screen and (min-width: 1025px) {
   .card {
-    overflow: hidden;
-    transition: transform 0.2s all;
+
+    .rolling-ball {
+      z-index: 2;
+      -moz-transform:rotate(690deg);
+      -webkit-transform:rotate(690deg);
+      -o-transform:rotate(690deg);
+      -ms-transform:rotate(690deg);
+      transform: rotate(690deg);
+
+      -moz-transition:all 2s ease;
+      -webkit-transition:all 2s ease;
+      -o-transition:all 2s ease;
+      -ms-transition:all 2s ease;
+      transition:all 2s ease;
+    }
+
+    .tour-button {
+      // visibility: hidden;
+      opacity: 0;
+      z-index: 1;
+    }
 
     &:hover {
-      filter:blur(3px);
-      opacity: 0.5;
-      transform: scale(0.98);
-      box-shadow: none;
+      transform: scale(1.2);
+      z-index: 100;
 
-      .card{
-        &:hover {
-          transform: scale(1);
-          filter: blur(0px);
-          opacity: 1;
-        }
-      }
-
-      .card-img-top{
-        transform: scale(1.1);
-        // z-index: 100;
-      }
       .button-position {
         .rolling-ball {
-          -moz-transform:rotate(-660deg);
-          -webkit-transform:rotate(-660deg);
-          -o-transform:rotate(-660deg);
-          -ms-transform:rotate(-660deg);
+          -moz-transform:rotate(0deg);
+          -webkit-transform:rotate(0deg);
+          -o-transform:rotate(0deg);
+          -ms-transform:rotate(0deg);
           transform:rotate(0deg);
           right:170px;
         }
       }
 
+      .tour-button {
+        animation: fadeIn ease 5.5s;
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+
+    .card-title {
+      text-transform: uppercase;
+
+      &:first-letter {
+        color: red;
+      }
+    }
+
+    .button-position {
+      .rolling-ball {
+        display: none;
+      }
     }
   }
 }

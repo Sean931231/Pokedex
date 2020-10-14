@@ -1,6 +1,6 @@
 <template>
   <div class="pokemon">
-    <p> pokemon Page</p>
+    <p> {{this.$route.name}} Page</p>
     <h1> {{ this.$route.query.region }} </h1>
     <div v-for="(pokemon, index) in pokemons" :key="pokemon.key">
       {{ index +1 }} ) {{ pokemon.name }}

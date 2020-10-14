@@ -12,5 +12,5 @@
 </script>
 
 <style lang="scss">
-@import "../styles/generation.scss" ;
+  @import "../styles/generation.scss";
 </style>

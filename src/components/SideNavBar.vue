@@ -19,7 +19,7 @@
         <!-- navbar content -->
         <b-navbar-nav class="ml-auto">
           <b-nav-item :to="'/'">Home</b-nav-item>
-          <b-nav-item :to="'/pokemon'">Pokemon</b-nav-item>
+          <b-nav-item :to="'/generation'">Generation</b-nav-item>
           <b-nav-item :to="'/about'">About</b-nav-item>
         </b-navbar-nav>
       </b-collapse>

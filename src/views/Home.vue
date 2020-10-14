@@ -9,16 +9,14 @@
               :img-src='"../assets/regionmap/"+ region.name +"-1.jpg"'
               img-alt="Region Map"
               img-top
-              class="mb-3">
-
-              <b-card-text>
+              class="mb-5">
+              <!-- <b-card-text>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </b-card-text>
+              </b-card-text> -->
               <div class="button-position">
                 <img src="../assets/svg/pokeball-2.svg" class="rolling-ball"/>
                 <b-button @click="tour(index+1)" variant="primary">Tour</b-button>
               </div>
-
             </b-card>
           </b-card-group>
         </b-col>
@@ -44,11 +42,11 @@ export default {
   methods: {
     init() {
       this.$api
-          .request("https://pokeapi.co/api/v2/region/")
-          .then(response => {
-            this.regions = response.data.results;
-            // console.log(this.regions);
-          })
+        .request("https://pokeapi.co/api/v2/region/")
+        .then(response => {
+          this.regions = response.data.results;
+          // console.log(this.regions);
+        })
     },
 
     tour(index, region) {

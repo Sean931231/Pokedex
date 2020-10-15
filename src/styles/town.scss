@@ -1,9 +1,21 @@
 .town {
-  .container {
-    background-color: Black;
-
+  .region-name {
     h1 {
-      color: #fff;
+      color: #000;
+    }
+  }
+
+  .first-part {
+    .region-map {
+      height: 500px;
+
+      img {
+        // max-width: 100%;
+        max-height: 100%;
+      }
+    }
+    .right-description{
+
     }
   }
 }

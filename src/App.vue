@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <Navbar title="PoKedex"/>
     <b-container fluid class="content">
-      <transition-page>
+    <!-- <Navbar title="PoKedex"/> -->
         <router-view />
-      </transition-page>
+      <!-- <transition-page>
+      </transition-page> -->
     </b-container>
   </div>
 </template>

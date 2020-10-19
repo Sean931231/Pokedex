@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <Navbar title="PoKedex"/>
     <b-container fluid class="content">
-    <!-- <Navbar title="PoKedex"/> -->
         <router-view />
       <!-- <transition-page>
       </transition-page> -->

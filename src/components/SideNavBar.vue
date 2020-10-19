@@ -1,8 +1,8 @@
 <template>
-  <div id="nav">
+  <div id="side-nav-bar">
     <b-navbar toggleable="lg" type="dark" fixed="top">
       <!-- navbar brand -->
-      <b-navbar-brand class="lg">
+      <b-navbar-brand>
         <img src="../assets/svg/pokeball-2.svg" class="d-inline-block align-top logo">
         {{ title }}
       </b-navbar-brand>

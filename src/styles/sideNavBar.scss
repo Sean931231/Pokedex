@@ -1,4 +1,11 @@
-#nav {
+#side-nav-bar {
+  z-index: 1000;
+
+  .btn {
+    position: absolute;
+    left: 0;
+  }
+
   .navbar {
     background-color: #ee1515;
 
@@ -18,7 +25,12 @@
       color: #2c3e50;
 
       &.router-link-exact-active {
-        color: #ffffff;
+        // color: #ffffff;
+        background-image: -webkit-gradient(#FEEBE5, #ffffff);
+        background-image: linear-gradient(#FEEBE5, #ffffff);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
         // font-weight: bold;
       }
     }

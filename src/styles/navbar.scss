@@ -1,0 +1,91 @@
+@media only screen and (min-width: 1025px) {
+  #nav-bar {
+    .pc-nav {
+      .navbar {
+        position: absolute;
+        // border: red 1px solid;
+        right: 0px;
+        top: 10px;
+
+        .navbar-toggler {
+
+          .logo-close {
+            width: 40px;
+          }
+
+          .logo-open {
+            width: 40px;
+          }
+
+          &:focus {
+            outline:none !important;
+            outline-width: 0 !important;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+          }
+        }
+      }
+    }
+
+    .mobile-nav {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #nav-bar {
+    margin-bottom: 75px;
+
+    .mobile-nav {
+      .navbar {
+        background-color: #ee1515;
+
+        .logo {
+          width: 30px;
+        }
+
+        .navbar-toggler{
+          border-color: #000;
+
+          .logo-close {
+            width: 40px;
+          }
+
+          .logo-open {
+            width: 40px;
+          }
+
+          &:focus {
+            border-color: #000;
+            outline:none !important;
+            outline-width: 0 !important;
+            box-shadow: none;
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+          }
+
+        }
+
+        a {
+          color: #2c3e50;
+
+          &.router-link-exact-active {
+            color: #ffffff;
+            // background-image: -webkit-gradient(#FEEBE5, #ffffff);
+            // background-image: linear-gradient(#FEEBE5, #ffffff);
+            // color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            // font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .pc-nav {
+      display: none;
+    }
+  }
+}

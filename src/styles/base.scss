@@ -5,10 +5,16 @@
   text-align: center;
   color: #2c3e50;
 
+  // #nav-bar{
+  //   position: absolute;
+  //   right: 0;
+  //   z-index: 1000;
+  // }
   .content {
-    margin-top: 55px;
+    // margin-top: 55px;
     overflow: hidden;
+    // background: linear-gradient(#120a17, #0c0612);
     background: linear-gradient(#FEEBE5, #ffffff);
-    // background: #FEEBE5;
+
   }
 }

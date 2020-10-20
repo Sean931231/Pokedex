@@ -8,7 +8,6 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Embed from 'v-video-embed'
-import { Plugin } from 'vue-responsive-video-background-player'
 
 Vue.config.productionTip = false
 // Install BootstrapVue
@@ -19,7 +18,6 @@ Vue.use(IconsPlugin)
 Vue.prototype.$api = axios
 Vue.use(VueAxios, axios)
 Vue.use(Embed);
-Vue.use(Plugin);
 
 new Vue({
   router,

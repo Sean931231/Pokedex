@@ -1,8 +1,9 @@
 .about {
-  background: url("../assets/background/gengar.jpg");
-  // background: #000;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  text-align: center;
+  margin: 0 auto;
 }

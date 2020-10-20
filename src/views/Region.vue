@@ -1,7 +1,7 @@
 <template>
   <div class="region">
     <b-container>
-      <b-row class="pt-5 mb-4">
+      <b-row class="pt-4 mb-4">
         <b-col md="4" lg="3" v-for="(region, index) in regions" :key="region.key">
           <b-card-group deck>
             <b-card

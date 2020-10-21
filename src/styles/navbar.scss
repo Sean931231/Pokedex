@@ -1,13 +1,21 @@
 @media only screen and (min-width: 1025px) {
   #nav-bar {
+    position: absolute;
+    right: 0;
+    z-index: 1000;
+
     .pc-nav {
       .navbar {
-        position: absolute;
-        // border: red 1px solid;
-        right: 0px;
+        // position: absolute;
+        // // border: red 1px solid;
+        // right: 0px;
         top: 10px;
 
         .navbar-toggler {
+          background-color: #ee1515;
+          -webkit-box-shadow: 0px 5px 25px -6px rgba(238,21,21,0.5);
+          -moz-box-shadow: 0px 5px 25px -6px rgba(238,21,21,0.5);
+          box-shadow: 0px 5px 25px -6px rgba(238,21,21,0.5);
 
           .logo-close {
             width: 40px;
@@ -20,9 +28,26 @@
           &:focus {
             outline:none !important;
             outline-width: 0 !important;
-            box-shadow: none;
-            -moz-box-shadow: none;
-            -webkit-box-shadow: none;
+          }
+        }
+
+        #my-sidebar {
+          .b-sidebar-header {
+            background: #ee1515;
+            color: #ffffff;
+          }
+          .b-sidebar-body {
+            .navbar-nav {
+              a {
+                color: #2c3e50;
+
+                &.router-link-exact-active {
+                  color: #ee1515;
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                }
+              }
+            }
           }
         }
       }
@@ -36,7 +61,8 @@
 
 @media only screen and (max-width: 1024px) {
   #nav-bar {
-    margin-bottom: 75px;
+    margin-bottom: 56px;
+    z-index: 1000;
 
     .mobile-nav {
       .navbar {

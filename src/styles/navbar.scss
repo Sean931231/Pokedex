@@ -1,6 +1,6 @@
 @media only screen and (min-width: 1025px) {
   #nav-bar {
-    position: absolute;
+    position: fixed;
     right: 0;
     z-index: 1000;
 
@@ -9,7 +9,7 @@
         // position: absolute;
         // // border: red 1px solid;
         // right: 0px;
-        top: 10px;
+        top: 15px;
 
         .navbar-toggler {
           background-color: #ee1515;
@@ -25,10 +25,24 @@
             width: 40px;
           }
 
+          .title-part {
+            color: #ffffff;
+            font-size: 17px;
+          }
+
+          &:hover {
+            .title-part {
+              animation-name: slideIn;
+              animation-duration: .5s;
+              animation-fill-mode: ease-in;
+            }
+          }
+
           &:focus {
             outline:none !important;
             outline-width: 0 !important;
           }
+
         }
 
         #my-sidebar {
@@ -42,11 +56,13 @@
                 color: #2c3e50;
 
                 &.router-link-exact-active {
-                  color: #ee1515;
-                  -webkit-background-clip: text;
-                  background-clip: text;
+                  // color: #ee1515;
+                  font-weight: bold;
+                  color: #ffffff;
+                  background-color: rgba(238, 21, 21, 0.5);
                 }
               }
+
             }
           }
         }
@@ -57,11 +73,22 @@
       display: none;
     }
   }
+
+  @keyframes slideIn {
+    0% {
+      transform: translateX(120%);
+      display: none;
+    }
+    100% {
+      transform: translateX(0%);
+      display: inline-block;
+    }
+  }
 }
 
 @media only screen and (max-width: 1024px) {
   #nav-bar {
-    margin-bottom: 56px;
+    margin-bottom: 55px;
     z-index: 1000;
 
     .mobile-nav {
@@ -69,22 +96,22 @@
         background-color: #ee1515;
 
         .logo {
-          width: 30px;
+          width: 28px;
         }
 
         .navbar-toggler{
-          border-color: #000;
+          border-color: #2c3e50;
 
           .logo-close {
-            width: 40px;
+            width: 28px;
           }
 
           .logo-open {
-            width: 40px;
+            width: 28px;
           }
 
           &:focus {
-            border-color: #000;
+            border-color: #2c3e50;
             outline:none !important;
             outline-width: 0 !important;
             box-shadow: none;
@@ -94,19 +121,22 @@
 
         }
 
-        a {
-          color: #2c3e50;
+        #nav-collapse {
+          a {
+            color: #2c3e50;
 
-          &.router-link-exact-active {
-            color: #ffffff;
-            // background-image: -webkit-gradient(#FEEBE5, #ffffff);
-            // background-image: linear-gradient(#FEEBE5, #ffffff);
-            // color: transparent;
-            -webkit-background-clip: text;
-            background-clip: text;
-            // font-weight: bold;
+            &.router-link-exact-active {
+              color: #ffffff;
+              // background-image: -webkit-gradient(#FEEBE5, #ffffff);
+              // background-image: linear-gradient(#FEEBE5, #ffffff);
+              // color: transparent;
+              -webkit-background-clip: text;
+              background-clip: text;
+              // font-weight: bold;
+            }
           }
         }
+
       }
     }
 

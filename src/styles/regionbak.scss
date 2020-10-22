@@ -1,0 +1,195 @@
+.region {
+  padding: 0px 20px;
+
+  .card {
+    // box-shadow:
+    //   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    //   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    //   0 12.5px 10px rgba(0, 0, 0, 0.06),
+    //   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    //   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    //   0 100px 80px rgba(0, 0, 0, 0.12);
+    -webkit-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+
+    .card-title {
+      &:first-letter {
+        text-transform: uppercase;
+      }
+    }
+
+    .button-position {
+      position: relative;
+      width: 100%;
+
+      .rolling-ball {
+        position: absolute;
+        right: 0;
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1025px) {
+  .region {
+    .each-card {
+      animation-name: slideUp;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      // animation-delay: 0s;
+      opacity: 0;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.9s;
+      }
+      &:nth-child(5) {
+        animation-delay: 1.2s;
+      }
+      &:nth-child(6) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(7) {
+        animation-delay: 1.8s;
+      }
+      &:nth-child(8) {
+        animation-delay: 2.1s;
+      }
+    }
+
+    .card {
+      .rolling-ball {
+        z-index: 2;
+        -moz-transform:rotate(690deg);
+        -webkit-transform:rotate(690deg);
+        -o-transform:rotate(690deg);
+        -ms-transform:rotate(690deg);
+        transform: rotate(690deg);
+
+        -moz-transition:all 2s ease;
+        -webkit-transition:all 2s ease;
+        -o-transition:all 2s ease;
+        -ms-transition:all 2s ease;
+        transition:all 2s ease;
+      }
+
+      .tour-button {
+        // visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        transition: all 2.55s ease-in-out;
+      }
+
+      &:hover {
+        transform: scale(1.2);
+        z-index: 100;
+
+        .button-position {
+          .rolling-ball {
+            -moz-transform:rotate(0deg);
+            -webkit-transform:rotate(0deg);
+            -o-transform:rotate(0deg);
+            -ms-transform:rotate(0deg);
+            transform:rotate(0deg);
+            right:170px;
+          }
+        }
+
+        .tour-button {
+          opacity: 1;
+          // animation: fadeIn ease-in-out 5s;
+        }
+      }
+    }
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .region {
+    .each-card {
+      animation-name: slideLeft;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      // animation-delay: 0s;
+      opacity: 0;
+
+      &:nth-child(1) {
+        animation-delay: 0s;
+      }
+      &:nth-child(2) {
+        animation-delay: 0.3s;
+      }
+      &:nth-child(3) {
+        animation-delay: 0.6s;
+      }
+      &:nth-child(4) {
+        animation-delay: 0.9s;
+      }
+      &:nth-child(5) {
+        animation-delay: 1.2s;
+      }
+      &:nth-child(6) {
+        animation-delay: 1.5s;
+      }
+      &:nth-child(7) {
+        animation-delay: 1.8s;
+      }
+      &:nth-child(8) {
+        animation-delay: 2.1s;
+      }
+    }
+
+    .card {
+      .card-title {
+        text-transform: uppercase;
+
+        &:first-letter {
+          color: red;
+        }
+      }
+
+      .button-position {
+        .rolling-ball {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
+    }
+  }
+}

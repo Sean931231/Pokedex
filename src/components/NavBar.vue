@@ -1,28 +1,30 @@
 <template>
   <div id="nav-bar">
     <!-- pc -->
-    <div class="pc-nav">
-      <b-navbar toggleable shadow>
-        <b-navbar-toggle target="my-sidebar">
-          <template #default="{ expanded }">
-            <b-img v-if="expanded" src="../assets/svg/openpokeball.png" class="logo-open"></b-img>
-            <b-img v-else src="../assets/svg/closepokeball.png" class="logo-close"></b-img>
-          </template>
-            <span> {{ title }} </span>
-        </b-navbar-toggle>
+    <transition name="fade">
+      <div class="pc-nav">
+        <b-navbar toggleable shadow>
+          <b-navbar-toggle target="my-sidebar">
+            <template #default="{ expanded }">
+              <b-img v-if="expanded" src="../assets/svg/openpokeball.png" class="logo-open"></b-img>
+              <b-img v-else src="../assets/svg/closepokeball.png" class="logo-close"></b-img>
+              <!-- <span class="title-part"> {{ title }} </span> -->
+            </template>
+          </b-navbar-toggle>
 
-        <b-sidebar id="my-sidebar" :title='title' text-variant="dark" shadow>
-          <div class="px-3 py-2">
-            <b-navbar-nav>
-              <b-nav-item :to="'/'">Home</b-nav-item>
-              <b-nav-item :to="'/region'">Region</b-nav-item>
-              <b-nav-item :to="'/generation'">Generation</b-nav-item>
-              <b-nav-item :to="'/about'">About</b-nav-item>
-            </b-navbar-nav>
-          </div>
-        </b-sidebar>
-      </b-navbar>
-    </div>
+          <b-sidebar id="my-sidebar" :title='title' text-variant="dark" shadow>
+            <div class="px-3 py-2">
+              <b-navbar-nav>
+                <b-nav-item :to="'/'">Home</b-nav-item>
+                <b-nav-item :to="'/region'">Region</b-nav-item>
+                <b-nav-item :to="'/generation'">Generation</b-nav-item>
+                <b-nav-item :to="'/about'">About</b-nav-item>
+              </b-navbar-nav>
+            </div>
+          </b-sidebar>
+        </b-navbar>
+      </div>
+    </transition>
     <!-- mobile -->
     <div class="mobile-nav">
       <b-navbar toggleable="lg" type="dark" fixed="top">

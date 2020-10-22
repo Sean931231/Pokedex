@@ -2,7 +2,7 @@
   <div id="app">
     <Navbar title="PoKedex"/>
     <b-container fluid class="content">
-        <router-view />
+      <router-view />
       <!-- <transition-page>
       </transition-page> -->
     </b-container>

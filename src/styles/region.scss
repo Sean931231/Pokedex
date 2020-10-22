@@ -1,108 +1,43 @@
-.region {
-  padding: 0px 20px;
-
-  .card {
-    // box-shadow:
-    //   0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    //   0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-    //   0 12.5px 10px rgba(0, 0, 0, 0.06),
-    //   0 22.3px 17.9px rgba(0, 0, 0, 0.072),
-    //   0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    //   0 100px 80px rgba(0, 0, 0, 0.12);
-    -webkit-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
-
-    .card-title {
-      &:first-letter {
-        text-transform: uppercase;
-      }
-    }
-
-    .button-position {
-      position: relative;
-      width: 100%;
-
-      .rolling-ball {
-        position: absolute;
-        right: 0;
-        width: 40px;
-        height: 40px;
-      }
-    }
-  }
-}
-
 @media only screen and (min-width: 1025px) {
   .region {
-    .card {
+    position: relative;
 
-      .rolling-ball {
-        z-index: 2;
-        -moz-transform:rotate(690deg);
-        -webkit-transform:rotate(690deg);
-        -o-transform:rotate(690deg);
-        -ms-transform:rotate(690deg);
-        transform: rotate(690deg);
-
-        -moz-transition:all 2s ease;
-        -webkit-transition:all 2s ease;
-        -o-transition:all 2s ease;
-        -ms-transition:all 2s ease;
-        transition:all 2s ease;
-      }
-
-      .tour-button {
-        // visibility: hidden;
-        opacity: 0;
-        z-index: 1;
-        transition: all 2.55s ease-in-out;
-      }
-
-      &:hover {
-        transform: scale(1.2);
-        z-index: 100;
-
-        .button-position {
-          .rolling-ball {
-            -moz-transform:rotate(0deg);
-            -webkit-transform:rotate(0deg);
-            -o-transform:rotate(0deg);
-            -ms-transform:rotate(0deg);
-            transform:rotate(0deg);
-            right:170px;
-          }
-        }
-
-        .tour-button {
-          opacity: 1;
-          // animation: fadeIn ease-in-out 5s;
-        }
-      }
+    .header-page {
+      position: relative;
+      height: 100vh;
+      background-color: red;
     }
-  }
-  @keyframes fadeIn {
-    0% {opacity:0;}
-    100% {opacity:1;}
+
+    .master-page {
+      position: relative;
+      height: 100vh;
+      background-color: blue;
+
+    }
   }
 }
 
 @media only screen and (max-width: 1024px) {
   .region {
-    .card {
-      .card-title {
-        text-transform: uppercase;
+    position: relative;
 
-        &:first-letter {
-          color: red;
-        }
-      }
+    .header-page {
+      position: relative;
+      height: 100vh;
+      // background-color: red;
+    }
 
-      .button-position {
-        .rolling-ball {
-          display: none;
-        }
+    .master-page {
+      position: relative;
+      height: 100vh;
+      // background-color: blue;
+      overflow: scroll;
+
+      .master-content {
+        position: relative;
+        background-color: green;
       }
     }
   }
 }
+

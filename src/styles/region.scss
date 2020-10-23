@@ -1,18 +1,145 @@
 @media only screen and (min-width: 1025px) {
   .region {
     position: relative;
+    width: 100vw;
+    // padding: 0px 20px;
 
     .header-page {
       position: relative;
+      // width: 100vw;
       height: 100vh;
-      background-color: red;
+      // background-color: red;
+      // background-image: url(../assets/background/gengar.jpg);
+      background-image: url(../assets/background/back.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-size: cover;
+
+      .background-slide {
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+      }
+
+      .middle-content {
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        top: 35vh;
+        z-index: 2;
+
+        .content-title {
+          span{
+            background-color: rgba(0,0,0,0.75);
+            color: #ffffff;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+
+        .scroll-button {
+          margin-top: 10vw;
+          cursor: pointer;
+
+          .downarrow {
+            position: relative;
+            width: 50px;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            animation: float 2s ease-in-out infinite;
+          }
+        }
+      }
     }
 
     .master-page {
       position: relative;
       height: 100vh;
-      background-color: blue;
+      // background-color: blue;
+      box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
 
+      .card {
+        -webkit-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+        box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+
+        .card-title {
+          &:first-letter {
+            text-transform: uppercase;
+          }
+        }
+
+        .button-position {
+          position: relative;
+          width: 100%;
+
+          .rolling-ball {
+            position: absolute;
+            right: 0;
+            width: 40px;
+            height: 40px;
+
+            z-index: 2;
+            -moz-transform:rotate(690deg);
+            -webkit-transform:rotate(690deg);
+            -o-transform:rotate(690deg);
+            -ms-transform:rotate(690deg);
+            transform: rotate(690deg);
+
+            -moz-transition:all 2s ease;
+            -webkit-transition:all 2s ease;
+            -o-transition:all 2s ease;
+            -ms-transition:all 2s ease;
+            transition:all 2s ease;
+          }
+
+          .tour-button {
+            // visibility: hidden;
+            opacity: 0;
+            z-index: 1;
+            transition: all 2.55s ease-in-out;
+          }
+        }
+
+        &:hover {
+          z-index: 100;
+
+          .button-position {
+            .rolling-ball {
+              -moz-transform:rotate(0deg);
+              -webkit-transform:rotate(0deg);
+              -o-transform:rotate(0deg);
+              -ms-transform:rotate(0deg);
+              transform:rotate(0deg);
+              right:160px;
+            }
+          }
+
+          .tour-button {
+            opacity: 1;
+            // animation: fadeIn ease-in-out 5s;
+          }
+        }
+      }
+    }
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
     }
   }
 }
@@ -20,6 +147,7 @@
 @media only screen and (max-width: 1024px) {
   .region {
     position: relative;
+    width: 100vw;
 
     .header-page {
       position: relative;
@@ -29,14 +157,39 @@
 
     .master-page {
       position: relative;
-      height: 100vh;
-      // background-color: blue;
-      overflow: scroll;
+      // height: 100vh;
+      // overflow: scroll;
 
-      .master-content {
-        position: relative;
-        background-color: green;
+      .card {
+        -webkit-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+        box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+
+        .card-title {
+          text-transform: uppercase;
+
+          &:first-letter {
+            color: red;
+          }
+        }
+
+        .button-position {
+          .rolling-ball {
+            display: none;
+          }
+        }
       }
+    }
+  }
+
+  @keyframes slideLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(150%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0%);
     }
   }
 }

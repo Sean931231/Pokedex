@@ -2,44 +2,75 @@
   <div class="region">
     <b-row class="header-page">
       <b-col cols="12">
-        <div class="page-title">
-          <h1> {{this.$route.name}} </h1>
+        <div class="background-slide">
+
+        </div>
+        <div class="middle-content">
+          <div class="content-title">
+            <!-- {{this.$route.name}} -->
+            <svgtitle />
+            <span> Regions are areas in the Pokémon universe that are smaller parts of a nation. </span> <br/>
+            <span>Region has their own Pokémon Professor, who provides a unique set of Starter Pokémon for young Trainers. </span>
+          </div>
+          <div class="scroll-button" @click="scrollToElement">
+            <!-- <b-button @click="scrollToElement">
+              click me
+            </b-button> -->
+            <downArrow class="downarrow"/>
+          </div>
         </div>
       </b-col>
     </b-row>
-    <b-row class="master-page pt-5 pb-5" align-h="center">
-      <b-col
-        md="4"
-        lg="3"
-        v-for="(region, index) in regions" :key="index"
-      >
-        <b-card
-          :title="region.name"
-          :img-src='"../assets/regionmap/"+ region.name +"-1.jpg"'
-          img-alt="Region Map"
-          img-top
-          class="mb-5"
-          >
-          <b-card-text>
-            This is a wider card with supporting text below as a natural lead-in to additional content.
-            This content is a little bit longer.
-          </b-card-text>
-        </b-card>
-      </b-col>
+    <b-row class="master-page pt-4 py-2" align-h="center">
+      <b-container>
+        <b-row class="pt-4 mb-4">
+          <b-col class="each-card" md="4" lg="3"
+          v-for="(region, index) in regions"
+          :key="region.key">
+            <b-card-group deck>
+              <b-card
+                :title="region.name"
+                :img-src='"../assets/regionmap/"+ region.name +"-1.jpg"'
+                img-alt="Region Map"
+                img-top
+                class="mb-5">
+                <div class="button-position">
+                  <img src="../assets/svg/pokeball-2.svg" class="rolling-ball"/>
+                  <b-button @click="tour(index+1)" variant="primary" class="tour-button">Tour</b-button>
+                </div>
+              </b-card>
+            </b-card-group>
+          </b-col>
+        </b-row>
+      </b-container>
     </b-row>
   </div>
 </template>
 
 <script>
+  import svgtitle from '@/components/regionSVG.vue';
+  import downArrow from '@/components/downArrow.vue';
   export default {
     name: 'Region',
     components: {
-
+      svgtitle,
+      downArrow
     },
     data() {
       return {
         regions: [],
-        cards: 8
+        regionImages: [
+          {
+            image: [
+              require("../assets/regionmap/1.png"),
+            ],
+          },
+          {
+            image: [
+              require("../assets/regionmap/2.png"),
+            ],
+          }
+        ]
       }
     },
     mounted () {
@@ -52,7 +83,26 @@
             .then(response => {
               this.regions = response.data.results;
             })
+      },
+
+      tour(index, region) {
+        this.$router.push ({
+          name: 'Town',
+          query: {
+            id: index,
+          }
+        })
+      },
+
+      scrollToElement() {
+        const el = this.$el.getElementsByClassName('master-page')[0];
+
+        if (el) {
+          el.scrollIntoView({
+            behavior: 'smooth'
+          });
       }
+  }
     },
   }
 </script>

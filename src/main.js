@@ -8,7 +8,9 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Embed from 'v-video-embed'
+import VideoBackground from 'vue-responsive-video-background-player'
 
+Vue.component('video-background', VideoBackground);
 Vue.config.productionTip = false
 // Install BootstrapVue
 Vue.use(BootstrapVue)

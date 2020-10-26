@@ -18,7 +18,7 @@
       animation-name: fadein;
       animation-duration: 1s;
       animation-fill-mode: forwards;
-      animation-delay: 1s;
+      animation-delay: 2s;
       opacity: 0;
 
       h1 {
@@ -26,9 +26,27 @@
       }
     }
 
+    .background-video {
+      position: relative  ;
+      margin: 0 auto;
+      height: 80vh;
+      background-color: blue;
+      top: 0;
+      left: 0;
+      right: 0;
+
+      animation-name: fadein;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0s;
+      opacity: 0;
+    }
+
     .sticker {
+      position: relative;
       // background-color: rgba(255, 0, 0, 0.5);
       // border: red 1px solid;
+      margin-top: -200px;
       z-index: 1;
 
       .left {
@@ -42,7 +60,7 @@
           animation-name: fadeInLeft;
           animation-duration: 1s;
           animation-fill-mode: forwards;
-          animation-delay: 2s;
+          animation-delay: 2.5s;
           opacity: 0;
         }
       }
@@ -58,7 +76,7 @@
           animation-name: fadeInRight;
           animation-duration: 1s;
           animation-fill-mode: forwards;
-          animation-delay: 3s;
+          animation-delay: 3.5s;
           opacity: 0;
         }
       }

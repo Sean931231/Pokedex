@@ -3,7 +3,9 @@
     <div class="grid-container">
       <div class="video">
         <div class="gameboy-back">
-
+          <video controls autoplay>
+            <source :src="this.video" type="video/mp4">
+          </video>
         </div>
       </div>
       <div class="top">top</div>
@@ -19,6 +21,8 @@ export default {
   },
   data() {
     return {
+      // video: "https://www.w3schools.com/tags/movie.mp4",
+      video: "/video/ep1.mp4",
       images: [
         {
           url: [

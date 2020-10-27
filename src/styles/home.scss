@@ -14,7 +14,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      gap: 5px 5px;
+      // gap: 5px 5px;
       grid-template-areas:
         "top video"
         "bottom video";
@@ -27,10 +27,13 @@
         grid-area: video;
 
         .gameboy-back {
-          width: 100%;
-          height: 50vh;
-          margin: 10px 0px;
-          background-color: red;
+          position: relative;
+          margin: 0 auto;
+          height: 100%;
+          margin: 10px 10px;
+          // background-color: red;
+          background-image: url(../assets/background/gameboy1.png);
+          background-position: top;
         }
       }
       .top {

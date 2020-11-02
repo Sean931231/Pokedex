@@ -2,11 +2,7 @@
   <b-row class="home">
     <div class="grid-container">
       <div class="video">
-        <div class="gameboy-back">
-          <video controls autoplay>
-            <source :src="this.video" type="video/mp4">
-          </video>
-        </div>
+        video
       </div>
       <div class="top">top</div>
       <div class="bottom">bottom</div>

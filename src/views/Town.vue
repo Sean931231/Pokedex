@@ -63,5 +63,5 @@
 </script>
 
 <style lang="scss">
-@import "../styles/town.scss"
+  @import "../styles/town.scss"
 </style>

@@ -21,19 +21,24 @@
         </div>
       </b-col>
     </b-row>
-    <b-row class="master-page pt-4 py-2" align-h="center">
+    <b-row class="master-page pt-4 py-2">
       <b-container>
         <b-row class="pt-4 mb-4">
           <b-col class="each-card" md="4" lg="3"
-          v-for="(region, index) in regions"
-          :key="region.key">
+            v-for="(region, index) in regions"
+            :key="region.key"
+            >
             <b-card-group deck>
               <b-card
-                :title="region.name"
                 :img-src='"../assets/regionmap/"+ region.name +"-1.jpg"'
                 img-alt="Region Map"
                 img-top
+                style="min-height: 17rem"
                 class="mb-5">
+
+                <div class="center-image">
+                  <img :src='"../assets/character/gen"+ (index+1) +".png"' >
+                </div>
                 <div class="button-position">
                   <img src="../assets/svg/pokeball-2.svg" class="rolling-ball"/>
                   <b-button @click="tour(index+1)" variant="primary" class="tour-button">Tour</b-button>

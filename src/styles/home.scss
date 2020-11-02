@@ -23,29 +23,19 @@
         width: 50vw;
         background-repeat: no-repeat;
         background-position: center;
-        // border: 1px solid red;
         grid-area: video;
-
-        .gameboy-back {
-          position: relative;
-          margin: 0 auto;
-          height: 100%;
-          margin: 10px 10px;
-          // background-color: red;
-          background-image: url(../assets/background/gameboy1.png);
-          background-position: top;
-        }
+        background-color: rgba(255, 0, 0, 0.5);
       }
       .top {
         width: 50vw;
-        background: green;
+        background: rgba(0, 128, 0, 0.5);
         // border: 1px solid green;
         grid-area: top;
 
       }
       .bottom {
         width: 50vw;
-        background: blue;
+        background: rgba(0, 0, 255, 0.5);
         // border: 1px solid blue;
         grid-area: bottom;
       }

@@ -72,9 +72,33 @@
           }
         }
 
+        .center-image {
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 90px;
+          height: 90px;
+          background-color: rgb(255, 255, 255);
+          border-radius: 50%;
+          border: 5px solid white;
+          overflow: hidden;
+
+          background-size: 100% 200%;
+          background-image: linear-gradient(to top, #0069D9 50%, #ffffff 50%);
+          transition: background-position 1.3s;
+
+          img {
+            position: relative;
+          }
+        }
+
         .button-position {
           position: relative;
           width: 100%;
+          top: 50px;
 
           .rolling-ball {
             position: absolute;
@@ -106,6 +130,10 @@
 
         &:hover {
           z-index: 100;
+
+          .center-image {
+            background-position: 0 100%;
+          }
 
           .button-position {
             .rolling-ball {

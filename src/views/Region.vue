@@ -3,7 +3,6 @@
     <b-row class="header-page">
       <b-col cols="12">
         <div class="background-slide">
-
         </div>
         <div class="middle-content">
           <div class="content-title">
@@ -87,13 +86,15 @@
             .request("https://pokeapi.co/api/v2/region/")
             .then(response => {
               this.regions = response.data.results;
+              console.log(response.data);
             })
       },
 
-      tour(index, region) {
+      tour(index) {
         this.$router.push ({
+          // path: 'town',
           name: 'Town',
-          query: {
+          params: {
             id: index,
           }
         })

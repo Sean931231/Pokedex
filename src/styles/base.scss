@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@1&display=swap');
+$old-font: 'Old Standard TT', serif;
+$ori-font: Avenir, Helvetica, Arial, sans-serif;
+$primary-color: #ee1515;
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: $ori-font;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -12,5 +17,18 @@
     // margin-top: 55px;
     // background: linear-gradient(#120a17, #0c0612);
     background: linear-gradient(#FEEBE5, #ffffff);
+  }
+
+  .moveInUp-enter-active {
+    animation: fadeIn 2s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
   }
 }

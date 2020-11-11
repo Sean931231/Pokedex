@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '@/views/Home.vue'
-import Region from '@/views/Region.vue'
+import Town from '@/views/Town.vue'
 
 Vue.use(VueRouter)
 
@@ -12,25 +12,25 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/region',
+    name: 'Region',
+    component: function () {
+      return import(/* webpackChunkName: "pokemon" */ '@/views/Region.vue')
+    }
+  },
+  {
+    path: '/town/:id',
+    name: 'Town',
+    component: Town
+  },
+  {
+    path: '/generation',
+    name: 'Generation',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "about" */ '../views/About.vue')
-    }
-  },
-  {
-    path: '/region',
-    name: 'Region',
-    component: Region
-  },
-  {
-    path: '/town',
-    name: 'Town',
-    component: function () {
-      return import(/* webpackChunkName: "pokemon" */ '../views/Town.vue')
+      return import(/* webpackChunkName: "Generation" */ '../views/Generation.vue')
     }
   },
   {
@@ -44,15 +44,15 @@ const routes = [
     }
   },
   {
-    path: '/generation',
-    name: 'Generation',
+    path: '/about',
+    name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: function () {
-      return import(/* webpackChunkName: "Generation" */ '../views/Generation.vue')
+      return import(/* webpackChunkName: "about" */ '../views/About.vue')
     }
-  }
+  },
 ]
 
 const router = new VueRouter({

@@ -1,9 +1,7 @@
 <template>
   <b-row class="home">
     <div class="grid-container">
-      <div class="video">
-        video
-      </div>
+      <div class="video">video</div>
       <div class="top">top</div>
       <div class="bottom">bottom</div>
     </div>

@@ -6,99 +6,690 @@
       "map" : "/image/regionmap/1.jpg",
       "region_name" : "kanto",
       "region_description": "Kanto was the first region to be introduced in the game series, featured in the Red, Blue and Yellow games along with the Generation III remakes and the Generation VII remakes. It is also accessible in the latter portion of Pokémon Gold, Silver, and Crystal after defeating the Elite Four.<br/> Like most regions, there is a theme regarding the names of towns and cities in Kanto. Most locations in Kanto are named after a color. The regional Pokémon professor is Professor Oak, who resides in Pallet Town.",
+      "info-from" : "https://pokemon.fandom.com/wiki/Kanto",
       "settlements" : [
         {
           "eng" : "Pallet Town",
           "jap" : "マサラタウン",
-          "slogan" : "A Pure White Beginning"
+          "slogan" : "A Pure White Beginning",
+          "source" : "https://pokemon.fandom.com/wiki/Pallet_Town",
+          "left_image" : "1.png",
+          "right_image" : "1.gif"
         },
         {
           "eng" : "Viridian City",
           "jap" : "ハナダシティ",
-          "slogan" : "The City of Evergreen"
+          "slogan" : "The City of Evergreen",
+          "left_image" : "2.png",
+          "right_image" : "2.gif"
         },
         {
           "eng" : "Pewter City",
           "jap" : "ニビシティ",
-          "slogan" : "Between Rugged Mountains"
+          "slogan" : "Between Rugged Mountains",
+          "left_image" : "3.png",
+          "right_image" : "3.gif"
         },
         {
           "eng" : "Cerulean City",
           "jap" : "ハナダシティ",
-          "slogan" : "The Floral Lagoon City"
+          "slogan" : "The Floral Lagoon City",
+          "left_image" : "4.png",
+          "right_image" : "4.gif"
         },
         {
           "eng" : "Vermilion City",
           "jap" : "クチバシティ",
-          "slogan" : "The Port of Exquisite Sunsets"
+          "slogan" : "The Port of Exquisite Sunsets",
+          "left_image" : "5.png",
+          "right_image" : "5.gif"
         },
         {
           "eng" : "Lavender Town",
           "jap" : "シオンタウン",
-          "slogan" : "The Noble Town"
+          "slogan" : "The Noble Town",
+          "left_image" : "6.png",
+          "right_image" : "6.gif"
         },
         {
           "eng" : "Celadon City",
           "jap" : "タマムシシティ",
-          "slogan" : "City of the Rainbow's Colors"
+          "slogan" : "City of the Rainbow's Colors",
+          "left_image" : "7.png",
+          "right_image" : "7.gif"
         },
         {
           "eng" : "Fuchsia City",
           "jap" : "セキチクシティ",
-          "slogan" : "Happening and Passing City"
+          "slogan" : "Happening and Passing City",
+          "left_image" : "8.png",
+          "right_image" : "8.gif"
         },
         {
           "eng" : "Saffron City",
           "jap" : "ヤマブキシティ",
-          "slogan" : "Shining Big City"
+          "slogan" : "Shining Big City",
+          "left_image" : "9.png",
+          "right_image" : "9.gif"
         },
         {
           "eng" : "Cinnabar Island",
           "jap" : "グレンタウン",
-          "slogan" : "The Ravaged Town of the Past"
+          "slogan" : "The Ravaged Town of the Past",
+          "left_image" : "10.png",
+          "right_image" : "10.gif"
         },
         {
           "eng" : "Indigo Plateau",
           "jap" : "セキエイこうげん",
-          "slogan" : "The ultimate Goal of Trainers!"
+          "slogan" : "The ultimate Goal of Trainers!",
+          "left_image" : "11.png",
+          "right_image" : "11.gif"
         }
-      ],
-      "info-from" : "https://pokemon.fandom.com/wiki/Kanto"
+      ]
     },
     {
       "id" : 2,
       "map" : "/image/regionmap/2.jpg",
       "region_name" : "johto",
       "region_description": "Johto is the second region introduced in the main game series, being featured in the Gold, Silver and Crystal games along with the Generation IV remakes. Geographically, Johto is located to the west of the Kanto region. <br/>The theme for locations in the Johto region is either plants or something related to a plant. The regional Pokémon professor is Professor Elm, who resides in New Bark Town.",
-      "info-from" :"https://pokemon.fandom.com/wiki/Johto"
+      "info-from" :"https://pokemon.fandom.com/wiki/Johto",
+      "settlements" : [
+        {
+          "eng" : "New Bark Town",
+          "jap" : "ワカバタウン",
+          "slogan" : "Winds of a New Beginning",
+          "source" : "https://static.wikia.nocookie.net/pokemon/images/a/af/New_Bark_town.png/revision/latest/scale-to-width-down/350?cb=20100905202639",
+          "left_image" : "1.png",
+          "right_image" : "1.gif"
+        },
+        {
+          "eng" : "Cherrygrove City",
+          "jap" : "ヨシノシティ",
+          "slogan" : "The City of Fragrant Flowers",
+          "left_image" : "2.png",
+          "right_image" : "2.gif"
+        },
+        {
+          "eng" : "Violet City",
+          "jap" : "キキョウシティ",
+          "slogan" : "The City of Nostalgic Scents",
+          "left_image" : "3.png",
+          "right_image" : "3.gif"
+        },
+        {
+          "eng" : "Azalea Town",
+          "jap" : "ヒワダタウン",
+          "slogan" : "Living Happily with Pokémon",
+          "left_image" : "4.png",
+          "right_image" : "4.gif"
+        },
+        {
+          "eng" : "Goldenrod City",
+          "jap" : "コガネシティ",
+          "slogan" : "A Happening Big City",
+          "left_image" : "5.png",
+          "right_image" : "5.gif"
+        },
+        {
+          "eng" : "Ecruteak City",
+          "jap" : "エンジュシティ",
+          "slogan" : "A Historical City",
+          "left_image" : "6.png",
+          "right_image" : "6.gif"
+        },
+        {
+          "eng" : "Olivine City",
+          "jap" : "アサギシ",
+          "slogan" : "The Port with Sea Breezes",
+          "left_image" : "7.png",
+          "right_image" : "7.gif"
+        },
+        {
+          "eng" : "Frontier Access",
+          "jap" : "フロンティアフロント",
+          "slogan" : "none",
+          "left_image" : "8.png",
+          "right_image" : "8.gif"
+        },
+        {
+          "eng" : "Cianwood City",
+          "jap" : "タンバシティ",
+          "slogan" : "A Port of Crashing Waves",
+          "left_image" : "9.png",
+          "right_image" : "9.gif"
+        },
+        {
+          "eng" : "Safari Zone Gate",
+          "jap" : "サファリゾーンゲート",
+          "slogan" : "none",
+          "left_image" : "10.png",
+          "right_image" : "10.gif"
+        },
+        {
+          "eng" : "Mahogany Town",
+          "jap" : "チョウジタウン",
+          "slogan" : "Home of the Ninja",
+          "left_image" : "11.png",
+          "right_image" : "11.gif"
+        },
+        {
+          "eng" : "Blackthorn City",
+          "jap" : "フスベシティ",
+          "slogan" : "A Quiet Mountain Retreat",
+          "left_image" : "12.png",
+          "right_image" : "12.gif"
+        }
+      ]
     },
     {
       "id" : 3,
       "map" : "/image/regionmap/3.jpg",
       "region_name" : "hoenn",
       "region_description": "Hoenn is the featured region in the Generation III games, Pokémon Ruby, Sapphire and Emerald. Geographically, Hoenn is located to the southwest of Kanto and Johto.<br>The theme for the locations in the Hoenn region is that of two words used together. The regional Pokémon professor is Professor Birch, who resides in Littleroot Town.",
-      "info-from" :"https://pokemon.fandom.com/wiki/Hoenn"
+      "info-from" :"https://pokemon.fandom.com/wiki/Hoenn",
+      "settlements" : [
+        {
+          "eng" : "Littleroot Town",
+          "jap" : "ミシロタウン",
+          "slogan" : "A town that can't be shaded any hue.",
+          "source" : "",
+          "left_image" : "1.png",
+          "right_image" : "1_1.png"
+        },
+        {
+          "eng" : "Oldale Town",
+          "jap" : "コトキタウン",
+          "slogan" : "Where things start off scarce.",
+          "source" : "",
+          "left_image" : "2.png",
+          "right_image" : "2_2.png"
+        },
+        {
+          "eng" : "Petalburg City",
+          "jap" : "トウカシティ",
+          "slogan" : "Where people mingle with nature.",
+          "source" : "",
+          "left_image" : "3.png",
+          "right_image" : "3_3.png"
+
+        },
+        {
+          "eng" : "Rustboro City",
+          "jap" : "カナズミシティ",
+          "slogan" : "The city probing the integration of nature and science.",
+          "source" : "",
+          "left_image" : "4.png",
+          "right_image" : "4_4.png"
+        },
+        {
+          "eng" : "Dewford Town",
+          "jap" : "ムロタウン",
+          "slogan" : "A tiny island in the blue sea.",
+          "source" : "",
+          "left_image" : "5.png",
+          "right_image" : "5_5.png"
+        },
+        {
+          "eng" : "Slateport City",
+          "jap" : "カイナシティ",
+          "slogan" : "The port where people and Pokémon cross paths with nature.",
+          "source" : "",
+          "left_image" : "6.png",
+          "right_image" : "6_6.png"
+        },
+        {
+          "eng" : "Mauville City",
+          "jap" : "キンセツシティ",
+          "slogan" : "The bright and shiny city of fun!",
+          "source" : "",
+          "left_image" : "7.png",
+          "right_image" : "7_7.png"
+        },
+        {
+          "eng" : "Verdanturf Town",
+          "jap" : "シダケタウン",
+          "slogan" : "The windswept highlands with the sweet fragrance of grass.",
+          "source" : "",
+          "left_image" : "8.png",
+          "right_image" : "8_8.png"
+        },
+        {
+          "eng" : "Lavaridge Town",
+          "jap" : "フエンタウン",
+          "slogan" : "An excellent place for relaxing!",
+          "source" : "",
+          "left_image" : "9.png",
+          "right_image" : "9_9.png"
+        },
+        {
+          "eng" : "Fallarbor Town",
+          "jap" : "ハジツゲタ",
+          "slogan" : "A farm community with small gardens.",
+          "source" : "",
+          "left_image" : "10.png",
+          "right_image" : "10_10.png"
+        },
+        {
+          "eng" : "Fortree City",
+          "jap" : "フエンタウン",
+          "slogan" : "The treetop city that frolics with nature.",
+          "source" : "",
+          "left_image" : "11.png",
+          "right_image" : "11_11.png"
+        },
+        {
+          "eng" : "Lilycove City",
+          "jap" : "ミナモシティ",
+          "slogan" : "Where the land ends and the sea begins.",
+          "source" : "",
+          "left_image" : "12.png",
+          "right_image" : "12_12.png"
+        },
+        {
+          "eng" : "Mossdeep City",
+          "jap" : "トクサネシティ",
+          "slogan" : "Our slogan: Cherish Pokémon!",
+          "source" : "",
+          "left_image" : "13.png",
+          "right_image" : "13_13.png"
+        },
+        {
+          "eng" : "Sootopolis City",
+          "jap" : "ルネシティ",
+          "slogan" : "The mystical city where history slumbers.",
+          "source" : "",
+          "left_image" : "14.png",
+          "right_image" : "14_14.png"
+        },
+        {
+          "eng" : "Pacifidlog Town",
+          "jap" : "キナギタウ",
+          "slogan" : "Where the morning sun smiles upon the waters.",
+          "source" : "",
+          "left_image" : "15.png",
+          "right_image" : "15_15.png"
+        },
+        {
+          "eng" : "Ever Grande City",
+          "jap" : "サイユウシティ",
+          "slogan" : "The paradise of flowers, the sea, and Pokémon",
+          "source" : "",
+          "left_image" : "16.png",
+          "right_image" : "16_16.png"
+        }
+      ]
     },
     {
       "id" : 4,
       "map" : "/image/regionmap/4.jpg",
       "region_name" : "sinnoh",
       "region_description": "Sinnoh is the region featured in the Generation IV games Pokémon Diamond, Pearl and Platinum. Sinnoh is located to the north of the Kanto region.<br>Unlike other regions, there is no theme underlying the names of locations in Sinnoh. The regional Pokémon professor is Professor Rowan, who resides in Sandgem Town, being the first professor to live in a town that is not the player's starting location.",
-      "info-from" :"https://pokemon.fandom.com/wiki/Sinnoh"
+      "info-from" :"https://pokemon.fandom.com/wiki/Sinnoh",
+      "settlements" : [
+        {
+          "eng" : "Twinleaf Town",
+          "jap" : "フタバタウン",
+          "slogan" : "Fresh and Free!",
+          "source" : "",
+          "left_image" : "1.png",
+          "right_image" : "1_1.png"
+        },
+        {
+          "eng" : "Sandgem Town",
+          "jap" : "マサゴタウン",
+          "slogan" : "Town of Sand!",
+          "source" : "",
+          "left_image" : "2.png"
+        },
+        {
+          "eng" : "Jubilife City",
+          "jap" : "コトブキシティ",
+          "slogan" : "City of Joy",
+          "source" : "",
+          "right_image" : "3.png"
+
+        },
+        {
+          "eng" : "Oreburgh City",
+          "jap" : "クロガネシティ",
+          "slogan" : "City of Energy",
+          "source" : "",
+          "right_image" : "4.png"
+        },
+        {
+          "eng" : "Floaroma Town",
+          "jap" : "ソノオタウン",
+          "slogan" : "Vivid & Scented",
+          "source" : "",
+          "left_image" : "5.png",
+          "right_image" : "5_5.png"
+        },
+        {
+          "eng" : "Eterna City",
+          "jap" : "ハクタイシティ",
+          "slogan" : "History Living",
+          "source" : "",
+          "left_image" : "6.png"
+        },
+        {
+          "eng" : "Hearthome City",
+          "jap" : "ヨスガシティ",
+          "slogan" : "Warm & Kind",
+          "source" : "",
+          "right_image" : "7_7.png"
+        },
+        {
+          "eng" : "Solaceon Town",
+          "jap" : "ズイタウン",
+          "slogan" : "Free of Worry!",
+          "source" : "",
+          "left_image" : "8.png"
+        },
+        {
+          "eng" : "Veilstone City",
+          "jap" : "トバリシティ",
+          "slogan" : "Hewn from Rock",
+          "source" : "",
+          "right_image" : "9_9.png"
+        },
+        {
+          "eng" : "Pastoria City",
+          "jap" : "ノモセシティ",
+          "slogan" : "The Marsh City",
+          "source" : ""
+        },
+        {
+          "eng" : "Celestic Town",
+          "jap" : "カンナギタウン",
+          "slogan" : "The Past Lives",
+          "source" : "",
+          "left_image" : "11.png"
+        },
+        {
+          "eng" : "Canalave City",
+          "jap" : "ミオシティ",
+          "slogan" : "Cargo Port",
+          "source" : "",
+          "left_image" : "12.png"
+        },
+        {
+          "eng" : "Snowpoint City",
+          "jap" : "キッサキシティ",
+          "slogan" : "City of Snow",
+          "source" : "",
+          "left_image" : "13.png"
+        },
+        {
+          "eng" : "Sunyshore City",
+          "jap" : "ナギサシティ",
+          "slogan" : "Solar Powered!",
+          "source" : ""
+        },
+        {
+          "eng" : "Pokémon League",
+          "jap" : "ポケモンリーグ",
+          "slogan" : "The Pinnacle of Trainerdom",
+          "source" : "",
+          "left_image" : "15.png"
+        }
+      ]
     },
     {
       "id" : 5,
       "map" : "/image/regionmap/5.jpg",
       "region_name" : "unova",
       "region_description": "Unova is the region featured in the Generation V games Pokémon Black and White. It is said that Unova is located very far away from the other regions, needing a boat to get there.<br>The theme for the names of Unova locations is weather, specifically clouds, since a few of the places seem to be named after types of clouds. (Nimbasa = Nimbus, Icirrus = Cirrus, for example) The regional Pokémon professor is Professor Juniper, who is the first regional professor to be female. She resides in Nuvema Town.",
-      "info-from" :"https://pokemon.fandom.com/wiki/Unova"
+      "info-from" :"https://pokemon.fandom.com/wiki/Unova",
+      "settlements" :[
+        {
+          "eng" : "Nuvema Town",
+          "jap" : "カノコタウン",
+          "slogan" : "The Start of Something Big",
+          "source" : "",
+          "left_image" : "1.png",
+          "right_image" : "1.gif"
+        },
+        {
+          "eng" : "Accumula Town",
+          "jap" : "カラクサタウン",
+          "slogan" : "The Fast-Growing Town!",
+          "source" : "",
+          "left_image" : "2.png",
+          "right_image" : "2.gif"
+        },
+        {
+          "eng" : "Striaton City",
+          "jap" : "サンヨウシティ",
+          "slogan" : "Three Stand Together as One!",
+          "source" : "",
+          "left_image" : "3.png",
+          "right_image" : "3.gif"
+        },
+        {
+          "eng" : "Nacrene City",
+          "jap" : "シッポウシティ",
+          "slogan" : "A Pearl of a Place",
+          "source" : "",
+          "left_image" : "4.png",
+          "right_image" : "4.gif"
+        },
+        {
+          "eng" : "Castelia City",
+          "jap" : "ヒウンシティ",
+          "slogan" : "A City of Grandeur",
+          "source" : "",
+          "left_image" : "5.jpg",
+          "right_image" : "5.gif"
+        },
+        {
+          "eng" : "Nimbasa City",
+          "jap" : "ライモンシティ",
+          "slogan" : "Lit by the Flash of Lightning!",
+          "source" : "",
+          "left_image" : "6.png",
+          "right_image" : "6.gif"
+        },
+        {
+          "eng" : "Anville Town",
+          "jap" : "カナワタウン",
+          "slogan" : "Rolling Out the Steel Rails",
+          "source" : "",
+          "left_image" : "7.png"
+        },
+        {
+          "eng" : "Driftveil City",
+          "jap" : "ホドモエシティ",
+          "slogan" : "A City of Billowing Sails",
+          "source" : "",
+          "left_image" : "8.png",
+          "right_image" : "8.gif"
+        },
+        {
+          "eng" : "Mistralton City",
+          "jap" : "フキヨセシティ",
+          "slogan" : "Strewn with Windblown Leaves",
+          "source" : "",
+          "left_image" : "9.png",
+          "right_image" : "9.gif"
+        },
+        {
+          "eng" : "Icirrus City",
+          "jap" : "セッカシティ",
+          "slogan" : "Sky Glittering with Flowers of Snow",
+          "source" : "",
+          "left_image" : "10.png",
+          "right_image" : "10.gif"
+        },
+        {
+          "eng" : "Opelucid City",
+          "jap" : "ソウリュウシティ",
+          "slogan" : "Time's Dividing Line",
+          "source" : "",
+          "left_image" : "11.png",
+          "right_image" : "11.gif"
+        },
+        {
+          "eng" : "Pokémon League",
+          "jap" : "ポケモンリーグ",
+          "slogan" : "The Pokémon League is every Trainer's greatest challenge!",
+          "source" : "",
+          "left_image" : "12.png"
+        },
+        {
+          "eng" : "Lacunosa Town",
+          "jap" : "カゴメトヴン",
+          "slogan" : "Methodical and Orderly",
+          "source" : "",
+          "left_image" : "13.png",
+          "right_image" : "13.gif"
+        },
+        {
+          "eng" : "Undella Town",
+          "jap" : "サザナミトヴン",
+          "slogan" : "A Town of Rippling Waves",
+          "source" : "",
+          "left_image" : "14.png",
+          "right_image" : "14.gif"
+        },
+        {
+          "eng" : "Black City",
+          "jap" : "ブラックシティ",
+          "slogan" : "Prosperous and Vibrant",
+          "source" : "",
+          "left_image" : "15.png",
+          "right_image" : "15.gif"
+        },
+        {
+          "eng" : "White Forest",
+          "jap" : "ホワイトフォレスト",
+          "slogan" : "People and Nature in Harmony",
+          "source" : "",
+          "left_image" : "16.png",
+          "right_image" : "16.gif"
+        },
+        {
+          "eng" : "Aspertia City",
+          "jap" : "ヒオウギシティ",
+          "slogan" : "Blackberry Lily City",
+          "source" : "",
+          "left_image" : "17.png",
+          "right_image" : "17_17.png"
+        },
+        {
+          "eng" : "Virbank City",
+          "jap" : "タチワキシティ",
+          "slogan" : "",
+          "source" : "",
+          "left_image" : "18.png",
+          "right_image" : "18_18.png"
+        }
+      ]
     },
     {
       "id" : 6,
       "map" : "/image/regionmap/6.jpg",
       "region_name" : "kalos",
       "region_description": "Kalos is the sixth region that appeared in Generation VI's game Pokémon X and Y. It is based off France. The regional scientist is Professor Sycamore, living in Lumiose City.",
-      "info-from" :"https://pokemon.fandom.com/wiki/Kalos"
+      "info-from" :"https://pokemon.fandom.com/wiki/Kalos",
+      "settlements" :[
+        {
+          "eng" : "Vaniville Town",
+          "jap" : "アサメタウン",
+          "slogan" : "A town whose flower is about to bloom.",
+          "source" : ""
+        },
+        {
+          "eng" : "Aquacorde Town",
+          "jap" : "メイスイタウン",
+          "slogan" : "Water and civilization in harmony.",
+          "source" : ""
+        },
+        {
+          "eng" : "Santalune City",
+          "jap" : "ハクダンシティ",
+          "slogan" : "A traditional city.",
+          "source" : ""
+        },
+        {
+          "eng" : "Lumiose City",
+          "jap" : "ミアレシティ",
+          "slogan" : "The City of Light.",
+          "source" : ""
+        },
+        {
+          "eng" : "Camphrier Town",
+          "jap" : "コボクタウン",
+          "slogan" : "A town where you can taste the ages.",
+          "source" : ""
+        },
+        {
+          "eng" : "Ambrette Town",
+          "jap" : "コウジンタウン",
+          "slogan" : "Where amber dust dances.",
+          "source" : ""
+        },
+        {
+          "eng" : "Cyllage City",
+          "jap" : "ショウヨウシティ",
+          "slogan" : "The city of peaceful strolls.",
+          "source" : ""
+        },
+        {
+          "eng" : "Geosenge Town",
+          "jap" : "セキタイタウン",
+          "slogan" : "Quiet stones speak volumes.",
+          "source" : ""
+        },
+        {
+          "eng" : "Shalour City",
+          "jap" : "シャラシティ",
+          "slogan" : "A city of awakening.",
+          "source" : ""
+        },
+        {
+          "eng" : "Coumarine City",
+          "jap" : "ヒヨクシティ",
+          "slogan" : "The city where bay and butte are bound.",
+          "source" : ""
+        },
+        {
+          "eng" : "Laverre City",
+          "jap" : "クノエシティ",
+          "slogan" : "The city of otherworldly dreams.",
+          "source" : ""
+        },
+        {
+          "eng" : "Dendemille Town",
+          "jap" : "フウジョタウン",
+          "slogan" : "A town where fluff dances on the wind.",
+          "source" : ""
+        },
+        {
+          "eng" : "Anistar City",
+          "jap" : "ヒャッコクシティ",
+          "slogan" : "The starry city marking the hours.",
+          "source" : ""
+        },
+        {
+          "eng" : "Couriway Town",
+          "jap" : "レンリタウン",
+          "slogan" : "A town connecting differences.",
+          "source" : ""
+        },
+        {
+          "eng" : "Snowbelle City",
+          "jap" : "エイセツシティ",
+          "slogan" : "The city of everlasting winter.",
+          "source" : ""
+        },
+        {
+          "eng" : "Kiloude City",
+          "jap" : "キナンシティ",
+          "slogan" : "A kind, sweet, and exquisite city.",
+          "source" : ""
+        }
+      ]
     },
     {
       "id" : 7,
@@ -112,7 +703,75 @@
       "map" : "/image/regionmap/8.jpg",
       "region_name" : "galar",
       "region_description": "Galar is the eighth region that appeared in Generation VIII's game Pokémon Sword and Shield. It is based off the United Kingdom.<br>Galar is the region where Pokémon Sword and Shield takes place. It debuted in Pokémon Journeys: The Series. The Starter Pokémon for beginners are Grookey, Scorbunny, and Sobble.",
-      "info-from" :""
+      "info-from" :"https://pokemon.fandom.com/wiki/Galar",
+      "settlements" : [
+        {
+          "eng" : "Postwick",
+          "jap" : "ハロンタウン",
+          "slogan" : "A farming town since days of old, where people and their Pokémon live in close harmony.",
+          "source" : ""
+        },
+        {
+          "eng" : "Wedgehurst",
+          "jap" : "ブラッシータウン",
+          "slogan" : "Our quiet borough is home to the esteemed Pokémon Research Lab.",
+          "source" : ""
+        },
+        {
+          "eng" : "Motostoke",
+          "jap" : "エンジンシティ",
+          "slogan" : "An industrial city studded with steam-powered marvels of modern engineering.",
+          "source" : ""
+        },
+        {
+          "eng" : "Turffield",
+          "jap" : "ターフタウン",
+          "slogan" : "A town nestled within the nurturing bowl of our many terraced farming fields.",
+          "source" : ""
+        },
+        {
+          "eng" : "Hulbury",
+          "jap" : "バウタウン",
+          "slogan" : "A bustling seaport that many visit to see its lively market stalls and famed restaurant.",
+          "source" : ""
+        },
+        {
+          "eng" : "Hammerlocke",
+          "jap" : "ナックルシティ",
+          "slogan" : "A city of great history, living and thriving within castle walls that date back to the middle ages.",
+          "source" : ""
+        },
+        {
+          "eng" : "Stow-on-Side",
+          "jap" : "ラテラルタウン",
+          "slogan" : "A vibrant town that has grown up around an ancient mural tucked away in the mountains.",
+          "source" : ""
+        },
+        {
+          "eng" : "Ballonlea",
+          "jap" : "アラベスクタウン",
+          "slogan" : "A charming town where the people make their homes among the trunks of the towering trees.",
+          "source" : ""
+        },
+        {
+          "eng" : "Circhester",
+          "jap" : "キルクスタウン",
+          "slogan" : "Buildings from an age long gone still stand about the steaming hot spring that covers the town.",
+          "source" : ""
+        },
+        {
+          "eng" : "Spikemuth",
+          "jap" : "スパイクタウン",
+          "slogan" : "This rocking town has a punk vibe and streets crammed with shops lined up cheek by jowl.",
+          "source" : ""
+        },
+        {
+          "eng" : "Wyndon",
+          "jap" : "シュートシティ",
+          "slogan" : "This booming metropolis was designed and developed by our very own Chairman Rose.",
+          "source" : ""
+        }
+      ]
     }
   ]
 }

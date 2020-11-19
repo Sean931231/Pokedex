@@ -86,7 +86,7 @@
             .request("https://pokeapi.co/api/v2/region/")
             .then(response => {
               this.regions = response.data.results;
-              console.log(response.data);
+              // console.log(response.data);
             })
       },
 

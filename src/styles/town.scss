@@ -17,10 +17,15 @@
         position: absolute;
         width: 50vw;
         height: 100%;
-        left: -45%;
-        background-color: rgba(255, 0, 0, 0.5);
-        // background-color: #ff0000;
-        // animation: leftCurtain 1s 0.5s linear forwards;
+        background-image: url(../assets/background/vintage.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        // background-color: rgba(255, 0, 0, 0.5);
+        // left: -45%;
+        animation: leftCurtain 1s 0.5s linear forwards;
+        box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
       }
 
       .right {
@@ -28,10 +33,16 @@
         width: 50vw;
         height: 100vh;
         right: 0;
-        right: -45%;
-        background-color: rgba(0, 0, 255, 0.5);
-        // background-color: #0000ff;
-        // animation: rightCurtain 1s 0.5s linear forwards;
+        background-image: url(../assets/background/vintage.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        // background-color: rgba(0, 0, 255, 0.5);
+        // right: -45%;
+        animation: rightCurtain 1s 0.5s linear forwards;
+        box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+        -webkit-box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+
       }
     }
 
@@ -43,9 +54,9 @@
       left: 0;
       right: 0;
       top: 0;
-      // background-color: #E7D6BD;
       overflow-y: scroll;
       scrollbar-width: none;
+
 
       .back {
         position: fixed;
@@ -66,7 +77,8 @@
         margin: 0 auto;
         // top: 50%;
         // transform: translateY(-50%);
-        // animation: MoveUp 1.5s 1s linear forwards;
+        opacity: 0;
+        animation: MoveUp 1.3s 1s linear forwards;
 
         h1 {
           color: #000000;
@@ -79,6 +91,8 @@
         position: relative;
         width: 90vw;
         margin: 0 auto;
+        opacity: 0;
+        animation: fadeIn 1.5s 2.5s linear forwards;
 
         .first-part {
           position: relative;
@@ -148,7 +162,6 @@
 
         .second-part {
           position: relative;
-          height: 100vh;
           display: grid;
           grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr;
@@ -176,12 +189,118 @@
                 color: #000;
                 font-size: 1vw;
                 padding: 10px;
+
+                &:first-child {
+                  cursor: pointer;
+                }
               }
             }
           }
 
           .town-img {
             grid-area: town-img;
+            text-align: center;
+
+            .function-desciption {
+              position: relative;
+              // top: 6vw;
+              font-size: 1.5vw;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .third-part {
+          position: relative;
+          padding: 0px 3vw;
+
+          h1 {
+            text-align: left;
+            text-decoration: underline;
+            font-weight: bold;
+          }
+
+          .more-about {
+            position: relative;
+            text-align: left;
+
+            .table-mode {
+              border: 3px dotted red;
+              .list {
+                width: 100%;
+                // border: 3px solid #000;
+                // background-color: rgba(207, 148, 67, 0.8);
+                font-weight: bold;
+
+                th {
+                  padding: 10px;
+                  color: $primary-color;
+                  font-size: 1.5vw;
+                  // text-align: center;
+                }
+
+                td {
+                  padding: 10px;
+                  color: #000;
+                  font-size: 1.3vw;
+
+                  &:first-child {
+                    font-size: 1.5vw;
+                    text-align: left;
+                  }
+
+                  .starter-pokemon {
+                    width: 20vw;
+                    display: inline-block;
+                    padding: 0.3vw;
+                    text-align: center;
+                    margin: 0 1vw;
+                    border: 0.5px solid black;
+
+                    &:first-child {
+                      margin-left: 0;
+                    }
+
+                    .pokemon-card {
+                      position: relative;
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      grid-template-rows: 1fr;
+                      gap: 0px 0px;
+                      grid-template-areas:
+                        "img info";
+                      width: 100%;
+
+                      .id {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                      }
+
+                      .img {
+                        grid-area: img;
+                        top: 0;
+                      }
+
+                      .pokemon-info {
+                        grid-area: info;
+                        top: 0;
+                        text-align: center;
+
+                        .type {
+                          border: 1px solid;
+                          display: inline-block;
+                          width: 50%;
+                          border-radius: 10px;
+                          margin-right: 10px;
+                        }
+                      }
+                    }
+
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -192,10 +311,21 @@
     0% {
       top: 50%;
       transform: translateY(-50%);
+      opacity: 1;
     }
     100% {
       top: 0;
       transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 
@@ -207,6 +337,7 @@
       left: -45%;
     }
   }
+
   @keyframes rightCurtain {
     0% {
       right: 0;
@@ -225,4 +356,3 @@
 @media only screen and (max-width: 1024px) {
 
 }
-

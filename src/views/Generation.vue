@@ -7,7 +7,16 @@
 <script>
   export default {
     name: "Generation",
+    data() {
+      return {
+        key: 0
+      }
+    },
+    methods: {
+      name() {
 
+      }
+    },
   }
 </script>
 

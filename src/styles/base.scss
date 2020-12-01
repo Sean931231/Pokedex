@@ -11,12 +11,17 @@ $primary-color: #ee1515;
   color: #2c3e50;
   margin: 0;
   height: 100vh;
+  background: #E0EAFC;  /* fallback for old browsers */
 
   .content {
     overflow: hidden;
     // margin-top: 55px;
     // background: linear-gradient(#120a17, #0c0612);
-    background: linear-gradient(#FEEBE5, #ffffff);
+    // background: linear-gradient(#FEEBE5, #ffffff);
+    background: #E0EAFC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
 
   .moveInUp-enter-active {

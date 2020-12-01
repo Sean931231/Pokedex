@@ -1,3 +1,81 @@
-.pokemon {
+@media only screen and (min-width: 1025px) {
+  .pokemon {
+    .grid-poke {
+      padding: 10px;
+
+      .poke-card {
+        position: relative;
+        text-align: center;
+        padding: 3px;
+        // margin: 5px;
+        width: 50%;
+
+        .card {
+          .card-img-top {
+            width: 35%;
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          .card-body {
+            .card-text {
+              // text-align: left;
+              margin-bottom: 0;
+
+              .poke-type {
+                border: 1px solid;
+                display: inline-block;
+                padding: 5px;
+                border-radius: 10px;
+                margin-right: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    overflow-y: scroll;
+  }
 
 }
+
+@media only screen and (max-width: 1024px) {
+  .pokemon {
+    .grid-poke {
+      padding: 10px;
+
+      .poke-card {
+        position: relative;
+        text-align: center;
+        padding: 3px;
+        // margin: 5px;
+        width: 50%;
+
+        .card {
+          .card-img-top {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+          }
+
+          .card-body {
+            .card-text {
+
+
+              .poke-type {
+                border: 1px solid;
+                display: inline-block;
+                padding: 5px;
+                border-radius: 10px;
+                margin-right: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+

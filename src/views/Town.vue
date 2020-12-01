@@ -100,6 +100,14 @@
                     </div>
                   </td>
                 </tr>
+                <tr>
+                  <td> Pokedexes Name  </td>
+                  <td>
+                    <b-button variant="dark" @click="pokePage(pokedexUrl)">
+                      {{ pokedexesName }}
+                    </b-button>
+                  </td>
+                </tr>
               </table>
             </div>
 
@@ -134,6 +142,8 @@
         mainGeneration: [],
         versionGroup: [],
         starterPokemon: [],
+        pokedexesName: '',
+        pokedexUrl: ''
       }
     },
     created() {
@@ -212,8 +222,14 @@
                 this.mainGeneration = result.main_generation;
                 this.versionGroup = result.version_groups;
                 this.getStarterPokemon(this.mainGeneration.url);
+                let pokedexes = [];
+                pokedexes = result.pokedexes;
+                pokedexes.forEach(element => {
+                  this.pokedexesName = element.name;
+                  this.pokedexUrl = element.url;
+                })
               } else {
-                console.log("Api meet up Problem");
+                console.log("Api seems incorrect");
                 return false;
               }
             })
@@ -224,12 +240,17 @@
         this.$api
             .get(url)
             .then( response => {
-              // console.log(response.data);
-              let result = response.data;
-              let startPokemon = response.data.pokemon_species.slice(0,3);
-              startPokemon.forEach(element => {
-                this.getPokemonInfo(element);
-              })
+              if (response.status === 200 ) {
+                // console.log(response.data);
+                let result = response.data;
+                let startPokemon = response.data.pokemon_species.slice(0,3);
+                startPokemon.forEach(element => {
+                  this.getPokemonInfo(element);
+                })
+              } else {
+                console.log("API URL: https://pokeapi.co/api/v2/generation/ has problem.");
+                return false;
+              }
             })
       },
 
@@ -237,16 +258,33 @@
         this.$api
             .get(`https://pokeapi.co/api/v2/pokemon/${element.name}`)
             .then( response => {
-              let result = response.data
+              if (response.status === 200) {
+                let result = response.data
 
-              this.starterPokemon.push({
-                id: result.id,
-                name: result.name,
-                img: result.sprites.other["official-artwork"].front_default,
-                types: result.types,
-                item: result.held_items
-              })
+                this.starterPokemon.push({
+                  id: result.id,
+                  name: result.name,
+                  img: result.sprites.other["official-artwork"].front_default,
+                  types: result.types,
+                  item: result.held_items
+                })
+
+                return this.starterPokemon.sort((a,b) => a.id - b.id);
+
+              } else {
+                console.log("Api seems incorrect");
+                return false;
+              }
             })
+      },
+
+      pokePage(pokedexUrl) {
+        this.$router.push({
+          name: 'Pokemon',
+          params: {
+            url: pokedexUrl
+          }
+        })
       }
     }
   }
@@ -272,6 +310,5 @@
   }
   .flying {
     background-color: #98a8f0;
-
   }
 </style>

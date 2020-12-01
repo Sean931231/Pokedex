@@ -8,7 +8,7 @@
           sm="12"
           class="poke-card"
           v-for="pokemon in pokemons"
-          :key="pokemon.key"
+          :key="pokemon.id"
           >
           <b-card-group deck>
             <b-card
@@ -49,13 +49,8 @@
     components: {
 
     },
-    props: [
-      'url'
-    ],
     data() {
       return {
-        pokeUrl: this.$route.params.url,
-
         pokemons: [],
         pokemonImage: '',
       }
@@ -67,31 +62,22 @@
 
     methods: {
       getPokemon() {
-        console.log(this.pokeUrl);
         this.$api
-          .get(this.pokeUrl)
+          .get("https://pokeapi.co/api/v2/pokemon?limit=151")
           .then(response => {
-            if (response.status === 200) {
-              let results = response.data;
-              let pokemons = response.data.pokemon_entries;
-              pokemons.forEach((element, index) => {
-                this.getPokemonInfo(element, index);
-              })
-
-            } else {
-              console.log("Api has meet up problem.")
-            }
+            let pokemonResult = [];
+            pokemonResult = response.data.results;
+            // this.pokemons = response.data.results;
+            pokemonResult.forEach((element, index) => {
+              this.getPokemonInfo(element, index);
+            })
           })
       },
 
+      // https://pokeapi.co/api/v2/pokemon/
       getPokemonInfo(element, index) {
-        let pokemonSpecies = element.pokemon_species.name;
-        if (pokemonSpecies === 'deoxys') {
-          pokemonSpecies = 'deoxys-normal'
-        }
-        let pokemonEntries = element.entry_number;
         this.$api
-            .get(`https://pokeapi.co/api/v2/pokemon/${pokemonSpecies}`)
+            .get(element.url)
             .then(results => {
               let data = results.data;
               if (data.sprites.front_default == null) {
@@ -100,7 +86,7 @@
                 this.pokemonImage = data.sprites.front_default;
               }
               this.pokemons.push({
-                id: pokemonEntries,
+                id: data.id,
                 name: data.name,
                 img: this.pokemonImage,
                 types: data.types,

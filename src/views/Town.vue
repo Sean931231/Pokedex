@@ -63,10 +63,6 @@
           <div class="more-about">
             <div class="table-mode">
               <table class="list">
-                <!-- <tr>
-                  <th> Title </th>
-                  <th>  </th>
-                </tr> -->
                 <tr>
                   <td> Main Generation </td>
                   <td> {{ mainGeneration.name }} </td>
@@ -280,10 +276,7 @@
 
       pokePage(pokedexUrl) {
         this.$router.push({
-          name: 'Pokemon',
-          params: {
-            url: pokedexUrl
-          }
+          name: 'Generation',
         })
       }
     }

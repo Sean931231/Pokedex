@@ -1,13 +1,12 @@
 <template>
   <div class="region">
     <b-row class="header-page">
-      <b-col cols="12">
-        <div class="background-slide">
-        </div>
+      <div class="background-slide">
         <div class="middle-content">
           <div class="content-title">
             <!-- {{this.$route.name}} -->
-            <svgtitle />
+            <svgtitle class="svg-pc" />
+            <svgmobile class="svg-mobile" title="REGION" />
             <span> Regions are areas in the Pokémon universe that are smaller parts of a nation. </span> <br/>
             <span>Region has their own Pokémon Professor, who provides a unique set of Starter Pokémon for young Trainers. </span>
           </div>
@@ -18,12 +17,12 @@
             <downArrow class="downarrow"/>
           </div>
         </div>
-      </b-col>
+      </div>
     </b-row>
     <b-row class="master-page pt-4 py-2">
       <b-container>
         <b-row class="pt-4 mb-4">
-          <b-col class="each-card" md="4" lg="3"
+          <b-col class="each-card" md="6" lg="3" sm="2"
             v-for="(region, index) in regions"
             :key="region.key"
             >
@@ -53,11 +52,13 @@
 
 <script>
   import svgtitle from '@/components/regionSVG.vue';
+  import svgmobile from '@/components/regionMobile.vue';
   import downArrow from '@/components/downArrow.vue';
   export default {
     name: 'Region',
     components: {
       svgtitle,
+      svgmobile,
       downArrow
     },
     data() {
@@ -107,8 +108,8 @@
           el.scrollIntoView({
             behavior: 'smooth'
           });
+        }
       }
-  }
     },
   }
 </script>

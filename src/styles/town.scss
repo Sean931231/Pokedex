@@ -295,7 +295,16 @@
                         }
                       }
                     }
+                  }
 
+                  .pokdexBtn {
+                    display: flex;
+                    flex-direction: row;
+
+                    .btn {
+                      margin: 0px 5px;
+                      border-radius: 10px;
+                    }
                   }
                 }
               }
@@ -575,10 +584,6 @@
                     margin-bottom: 1vw;
                     border: 0.5px solid black;
 
-                    // &:first-child {
-                    //   margin-left: 0;
-                    // }
-
                     .pokemon-card {
                       position: relative;
                       width: 100%;
@@ -611,6 +616,17 @@
                           // margin-right: 10px;
                         }
                       }
+                    }
+                  }
+
+                  .pokdexBtn {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .btn {
+                      margin: 1vw 0vw;
+                      border-radius: 2vw;
                     }
                   }
                 }

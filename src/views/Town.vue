@@ -99,9 +99,11 @@
                 <tr>
                   <td> Pokedexes Name  </td>
                   <td>
-                    <b-button variant="dark" @click="pokePage(pokedexUrl)">
-                      {{ pokedexesName }}
-                    </b-button>
+                    <div class="pokdexBtn">
+                      <b-button variant="dark" v-for="pokedex in pokedexesName" :key="pokedex.key" @click="pokePage(pokedex.url)">
+                      {{ pokedex.name }}
+                      </b-button>
+                    </div>
                   </td>
                 </tr>
               </table>
@@ -138,7 +140,7 @@
         mainGeneration: [],
         versionGroup: [],
         starterPokemon: [],
-        pokedexesName: '',
+        pokedexesName: [],
         pokedexUrl: ''
       }
     },
@@ -220,10 +222,11 @@
                 this.getStarterPokemon(this.mainGeneration.url);
                 let pokedexes = [];
                 pokedexes = result.pokedexes;
-                pokedexes.forEach(element => {
-                  this.pokedexesName = element.name;
-                  this.pokedexUrl = element.url;
-                })
+                this.pokedexesName = pokedexes;
+                // pokedexes.forEach(element => {
+                //   this.pokedexesName = element.name;
+                //   this.pokedexUrl = element.url;
+                // })
               } else {
                 console.log("Api seems incorrect");
                 return false;
@@ -275,8 +278,13 @@
       },
 
       pokePage(pokedexUrl) {
+        let urlArray = pokedexUrl;
+        let urlSplit = urlArray.split('/');
         this.$router.push({
-          name: 'Generation',
+          name: 'Pokedex',
+          params: {
+            id: urlSplit[6],
+          }
         })
       }
     }
@@ -285,23 +293,5 @@
 
 <style lang="scss">
   @import "../styles/town.scss";
-
-  .grass {
-    background-color: #78c850;
-  }
-  .fire {
-    background-color: #f05030;
-  }
-  .water {
-    background-color: #3898f8;
-  }
-  .poison {
-    background-color: #b058a0;
-  }
-  .psychic {
-    background-color: #f870a0;
-  }
-  .flying {
-    background-color: #98a8f0;
-  }
+  @import "../styles/typeColor.scss";
 </style>

@@ -21,7 +21,7 @@
               :img-src="pokemon.img"
               img-alt="pokemon-image"
               img-top>
-              <b-card-title>
+              <b-card-title >
                 #{{ pokemon.id }} <span>{{ pokemon.name }}</span>
               </b-card-title>
               <b-card-text>
@@ -66,16 +66,21 @@
 
     methods: {
       getPokemon() {
-        this.$api
-          .get("https://pokeapi.co/api/v2/pokemon?limit=151")
-          .then(response => {
-            let pokemonResult = [];
-            pokemonResult = response.data.results;
-            // this.pokemons = response.data.results;
-            pokemonResult.forEach((element, index) => {
-              this.getPokemonInfo(element, index);
+        console.log(this.$route.params.id);
+        if (this.$route.params.id != null) {
+          console.log("stuck here");
+        } else {
+          this.$api
+            .get("https://pokeapi.co/api/v2/pokemon?limit=151")
+            .then(response => {
+              let pokemonResult = [];
+              pokemonResult = response.data.results;
+              // this.pokemons = response.data.results;
+              pokemonResult.forEach((element, index) => {
+                this.getPokemonInfo(element, index);
+              })
             })
-          })
+        }
       },
 
       // https://pokeapi.co/api/v2/pokemon/
@@ -97,7 +102,7 @@
                 weight: data.weight,
                 height: data.height
               })
-              return this.pokemons.sort((a,b) => a.id - b.id);
+              this.pokemons.sort((a,b) => a.id - b.id);
             })
       }
     },
@@ -108,60 +113,5 @@
 
 <style lang="scss">
   @import "../styles/pokemon.scss";
-
-  .grass {
-    background-color: #78c850;
-  }
-  .fire {
-    background-color: #f05030;
-  }
-  .water {
-    background-color: #3898f8;
-  }
-  .poison {
-    background-color: #b058a0;
-  }
-  .psychic {
-    background-color: #f870a0;
-  }
-  .flying {
-    background-color: #98a8f0;
-  }
-  .electric {
-    background-color: #f8c030;
-  }
-  .dragon {
-    background-color: #7860e0;
-  }
-  .normal {
-    background-color: #a8a090;
-  }
-  .rock {
-    background-color: #b8a058;
-  }
-  .ice {
-    background-color: #58c8e0;
-  }
-  .fairy {
-    background-color: #f1a7f9;
-  }
-  .bug {
-    background-color: #a8b820;
-  }
-  .ground {
-    background-color: #d0b058;
-  }
-  .fighting {
-    background-color: #a05038;
-  }
-  .ghost {
-    background-color: #6060b0;
-  }
-  .steel {
-    background-color: #a8a8c0;
-  }
-  .dark {
-    background-color: #705848;
-  }
-
+  @import "../styles/typeColor.scss";
 </style>

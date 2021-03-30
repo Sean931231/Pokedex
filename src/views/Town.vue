@@ -63,10 +63,6 @@
           <div class="more-about">
             <div class="table-mode">
               <table class="list">
-                <!-- <tr>
-                  <th> Title </th>
-                  <th>  </th>
-                </tr> -->
                 <tr>
                   <td> Main Generation </td>
                   <td> {{ mainGeneration.name }} </td>
@@ -97,6 +93,16 @@
                           </div>
                         </div>
                       </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <td> Pokedexes Name  </td>
+                  <td>
+                    <div class="pokdexBtn">
+                      <b-button variant="dark" v-for="pokedex in pokedexesName" :key="pokedex.key" @click="pokePage(pokedex.url)">
+                      {{ pokedex.name }}
+                      </b-button>
                     </div>
                   </td>
                 </tr>
@@ -134,6 +140,8 @@
         mainGeneration: [],
         versionGroup: [],
         starterPokemon: [],
+        pokedexesName: [],
+        pokedexUrl: ''
       }
     },
     created() {
@@ -212,8 +220,15 @@
                 this.mainGeneration = result.main_generation;
                 this.versionGroup = result.version_groups;
                 this.getStarterPokemon(this.mainGeneration.url);
+                let pokedexes = [];
+                pokedexes = result.pokedexes;
+                this.pokedexesName = pokedexes;
+                // pokedexes.forEach(element => {
+                //   this.pokedexesName = element.name;
+                //   this.pokedexUrl = element.url;
+                // })
               } else {
-                console.log("Api meet up Problem");
+                console.log("Api seems incorrect");
                 return false;
               }
             })
@@ -224,12 +239,17 @@
         this.$api
             .get(url)
             .then( response => {
-              // console.log(response.data);
-              let result = response.data;
-              let startPokemon = response.data.pokemon_species.slice(0,3);
-              startPokemon.forEach(element => {
-                this.getPokemonInfo(element);
-              })
+              if (response.status === 200 ) {
+                // console.log(response.data);
+                let result = response.data;
+                let startPokemon = response.data.pokemon_species.slice(0,3);
+                startPokemon.forEach(element => {
+                  this.getPokemonInfo(element);
+                })
+              } else {
+                console.log("API URL: https://pokeapi.co/api/v2/generation/ has problem.");
+                return false;
+              }
             })
       },
 
@@ -237,16 +257,35 @@
         this.$api
             .get(`https://pokeapi.co/api/v2/pokemon/${element.name}`)
             .then( response => {
-              let result = response.data
+              if (response.status === 200) {
+                let result = response.data
 
-              this.starterPokemon.push({
-                id: result.id,
-                name: result.name,
-                img: result.sprites.other["official-artwork"].front_default,
-                types: result.types,
-                item: result.held_items
-              })
+                this.starterPokemon.push({
+                  id: result.id,
+                  name: result.name,
+                  img: result.sprites.other["official-artwork"].front_default,
+                  types: result.types,
+                  item: result.held_items
+                })
+
+                return this.starterPokemon.sort((a,b) => a.id - b.id);
+
+              } else {
+                console.log("Api seems incorrect");
+                return false;
+              }
             })
+      },
+
+      pokePage(pokedexUrl) {
+        let urlArray = pokedexUrl;
+        let urlSplit = urlArray.split('/');
+        this.$router.push({
+          name: 'Pokedex',
+          params: {
+            id: urlSplit[6],
+          }
+        })
       }
     }
   }
@@ -254,24 +293,5 @@
 
 <style lang="scss">
   @import "../styles/town.scss";
-
-  .grass {
-    background-color: #78c850;
-  }
-  .fire {
-    background-color: #f05030;
-  }
-  .water {
-    background-color: #3898f8;
-  }
-  .poison {
-    background-color: #b058a0;
-  }
-  .psychic {
-    background-color: #f870a0;
-  }
-  .flying {
-    background-color: #98a8f0;
-
-  }
+  @import "../styles/typeColor.scss";
 </style>

@@ -57,7 +57,6 @@
       overflow-y: scroll;
       scrollbar-width: none;
 
-
       .back {
         position: fixed;
         left: 7.5vw;
@@ -296,7 +295,16 @@
                         }
                       }
                     }
+                  }
 
+                  .pokdexBtn {
+                    display: flex;
+                    flex-direction: row;
+
+                    .btn {
+                      margin: 0px 5px;
+                      border-radius: 10px;
+                    }
                   }
                 }
               }
@@ -348,11 +356,329 @@
   }
 
   /* scrollbar width chrome*/
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
+  // ::-webkit-scrollbar {
+  //   width: 0px;
+  // }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
+  .town {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-image: url(../assets/background/vintage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    // font-family: $old-font;
+
+    .curtain {
+      z-index: 100;
+
+      .left {
+        position: absolute;
+        width: 50vw;
+        height: 100%;
+        background-image: url(../assets/background/vintage.jpg);
+        background-repeat: no-repeat;
+        background-position: right;
+        animation: leftCurtain 1s 0.5s linear forwards;
+        box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
+        -webkit-box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: 5px 0px 14px 1px rgba(0,0,0,0.5);
+      }
+
+      .right {
+        position: absolute;
+        width: 50vw;
+        height: 100vh;
+        right: 0;
+        background-image: url(../assets/background/vintage.jpg);
+        background-repeat: no-repeat;
+        background-position: left;
+        animation: rightCurtain 1s 0.5s linear forwards;
+        box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+        -webkit-box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+        -moz-box-shadow: -5px 0px 14px 1px rgba(0,0,0,0.5);
+
+      }
+    }
+
+    .town-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: 0;
+      overflow-y: scroll;
+      scrollbar-width: none;
+
+      .back {
+        display: none;
+        position: fixed;
+        margin-top: 5vw;
+        left: 3vw;
+      }
+
+      .region-title {
+        position: relative;
+        margin: 0 auto;
+        opacity: 0;
+        animation: MoveUp 1.3s 1s linear forwards;
+
+        h1 {
+          color: #000000;
+        }
+      }
+
+      .region-content {
+        position: relative;
+        width: 100vw;
+        margin: 0 auto;
+        padding: 0vw 3vw;
+        opacity: 0;
+        animation: fadeIn 1.5s 2.5s linear forwards;
+
+        .first-part {
+          position: relative;
+          height: 70vh;
+
+          .map {
+            position: absolute;
+            margin: 0 auto;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            min-height: 60vh;
+            max-height: 70vh;
+            text-align: center;
+            z-index: 0;
+
+            .town-map {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+
+              .layer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(207, 148, 67, 0.5);
+              }
+            }
+          }
+
+          .description {
+            position: relative;
+            padding: 1.5vw;
+            font-weight: bold;
+            z-index: 1;
+
+            h1 {
+              text-align: left;
+              text-decoration: underline;
+              color: #ffffff;
+            }
+
+            p {
+              text-align: justify;
+              font-size: 3.5vw;
+              color: #ffffff;
+              font-weight: lighter;
+              line-height: 28px;
+            }
+
+            a {
+              position: absolute;
+              left: 1.5vw;
+              color: #ffffff;
+              font-weight: normal;
+            }
+          }
+        }
+
+        .second-part {
+          position: relative;
+
+          .town-list {
+            text-align: center;
+
+            .list {
+              border: 1px solid #000;
+              background-color: rgba(207, 148, 67, 0.8);
+
+              th {
+                padding: 10px;
+                color: $primary-color;
+              }
+
+              td {
+                color: #000;
+                padding: 10px;
+
+                &:first-child {
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+
+          .town-img {
+            text-align: center;
+            margin-top: 5vw;
+
+            .function-desciption {
+              position: relative;
+              font-weight: bold;
+            }
+          }
+        }
+
+        .third-part {
+          position: relative;
+          padding: 0px 3vw;
+
+          h1 {
+            text-align: left;
+            text-decoration: underline;
+            font-weight: bold;
+          }
+
+          .more-about {
+            position: relative;
+            text-align: left;
+
+            .table-mode {
+              border: 3px dotted red;
+
+              .list {
+                width: 100%;
+                font-weight: bold;
+
+                th {
+                  color: $primary-color;
+                  // text-align: center;
+                }
+
+                td {
+                  padding: 10px;
+                  color: #000;
+
+                  &:first-child {
+                    text-align: left;
+                  }
+
+                  .starter-pokemon {
+                    // width: 20vw;
+                    padding: 3vw;
+                    text-align: center;
+                    margin-bottom: 1vw;
+                    border: 0.5px solid black;
+
+                    .pokemon-card {
+                      position: relative;
+                      width: 100%;
+                      display: grid;
+                      grid-template-columns: 1fr 1fr;
+                      grid-template-rows: 1fr;
+                      gap: 0px 0px;
+                      grid-template-areas:
+                        "img info";
+
+                      .id {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                      }
+
+                      .img {
+                        grid-area: img;
+                        top: 0;
+                      }
+
+                      .pokemon-info {
+                        grid-area: info;
+                        top: 0;
+                        text-align: center;
+
+                        .type {
+                          border: 1px solid;
+                          // border-radius: 10px;
+                          // margin-right: 10px;
+                        }
+                      }
+                    }
+                  }
+
+                  .pokdexBtn {
+                    width: 70%;
+                    display: flex;
+                    flex-direction: column;
+
+                    .btn {
+                      margin: 1vw 0vw;
+                      border-radius: 2vw;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+  @keyframes leftCurtain {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -50%;
+    }
+  }
+
+  @keyframes rightCurtain {
+    0% {
+      right: 0;
+    }
+    100% {
+      right: -50%;
+    }
+  }
+
+  @keyframes MoveUp {
+    0% {
+      top: 50vw;
+      opacity: 1;
+    }
+    100% {
+      top: 0vw;
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+}
+
+@media (min-width: 769px) and (max-width: 1024) {
 
 }

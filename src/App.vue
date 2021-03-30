@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <Navbar title="PoKedex"/>
-    <b-container fluid class="content">
+    <Navbar title="PoKedex" /> <!-- v-if="this.$route.name != 'Home'" -->
+    <div class="content">
         <router-view />
       <!-- <transition name="moveInUp">
       </transition> -->
       <!-- <transition-page>
       </transition-page> -->
-    </b-container>
+    </div>
   </div>
 </template>
 <script>

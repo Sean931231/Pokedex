@@ -1,3 +1,4 @@
+@import "base.scss";
 @media only screen and (min-width: 1025px) {
   .region {
     position: relative;
@@ -8,8 +9,6 @@
       position: relative;
       // width: 100vw;
       height: 100vh;
-      // background-color: red;
-      // background-image: url(../assets/background/gengar.jpg);
       background-image: url(../assets/background/back.png);
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -20,39 +19,46 @@
         z-index: 1;
         width: 100%;
         height: 100vh;
-      }
 
-      .middle-content {
-        position: absolute;
-        margin: 0 auto;
-        left: 0;
-        right: 0;
-        top: 35vh;
-        z-index: 2;
+        .middle-content {
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 35vh;
+          z-index: 2;
 
-        .content-title {
-          span{
-            background-color: rgba(0,0,0,0.75);
-            color: #ffffff;
-            font-size: 20px;
-            font-weight: bold;
+          .content-title {
+            .svg-mobile {
+              display: none;
+            }
+            .svg-pc {
+              display: block;
+            }
+            span{
+              background-color: rgba(0,0,0,0.75);
+              color: #ffffff;
+              font-size: 20px;
+              font-weight: bold;
+            }
+          }
+
+          .scroll-button {
+            margin-top: 10vw;
+            cursor: pointer;
+
+            .downarrow {
+              position: relative;
+              width: 50px;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              animation: float 2s ease-in-out infinite;
+            }
           }
         }
-
-        .scroll-button {
-          margin-top: 10vw;
-          cursor: pointer;
-
-          .downarrow {
-            position: relative;
-            width: 50px;
-            margin: 0 auto;
-            left: 0;
-            right: 0;
-            animation: float 2s ease-in-out infinite;
-          }
-        }
       }
+
     }
 
     .master-page {
@@ -172,7 +178,7 @@
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
   .region {
     position: relative;
     width: 100vw;
@@ -180,45 +186,134 @@
     .header-page {
       position: relative;
       height: 100vh;
-      // background-color: red;
+      background-image: url(../assets/background/back.png);
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-position: 70%;
+
+      .background-slide {
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+
+        .middle-content {
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+
+          .content-title {
+            width: 100vw;
+            text-align: left;
+            padding: 3vw;
+
+            .svg-pc {
+              display: none;
+            }
+            .svg-mobile{
+              display: block;
+              width: 80vw;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              text-align: center;
+            }
+
+            span{
+              background-color: rgba(0,0,0,0.75);
+              color: #ffffff;
+              font-size: 4vw;
+              font-weight: bold;
+            }
+          }
+
+          .scroll-button {
+            margin-top: 10vw;
+            cursor: pointer;
+
+            .downarrow {
+              position: relative;
+              width: 50px;
+              margin: 0 auto;
+              left: 0;
+              right: 0;
+              animation: float 2s ease-in-out infinite;
+            }
+          }
+        }
+      }
+
     }
 
     .master-page {
       position: relative;
-      // height: 100vh;
-      // overflow: scroll;
+      overflow: scroll;
+      width: 100vw;
+      height: 100vh;
 
       .card {
         -webkit-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
         box-shadow: 0px 7px 28px -4px rgba(0,0,0,0.75);
+        margin-top: 5vw;
+        position: relative;
 
-        .card-title {
-          text-transform: uppercase;
-
-          &:first-letter {
-            color: red;
+        .center-image {
+          position: absolute;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 50%;
+          transform: translateY(-30%);
+          width: 25vw;
+          height: 25vw;
+          border-radius: 50%;
+          border: 5px solid white;
+          overflow: hidden;
+          background-color: #0069D9;
+          img {
+            position: relative;
           }
         }
 
         .button-position {
+          position: absolute;
+          width: 100%;
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          top: 80%;
+          transform: translateY(-10%);
+
           .rolling-ball {
             display: none;
+          }
+
+          .tour-button {
+            opacity: 1;
           }
         }
       }
     }
   }
 
-  @keyframes slideLeft {
+  @keyframes float {
     0% {
-      opacity: 0;
-      transform: translateX(150%);
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
     }
     100% {
-      opacity: 1;
-      transform: translateX(0%);
+      transform: translatey(0px);
     }
   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
 }
 

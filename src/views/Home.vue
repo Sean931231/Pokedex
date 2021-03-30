@@ -1,11 +1,7 @@
 <template>
-  <b-row class="home">
-    <div class="grid-container">
-      <div class="video">video</div>
-      <div class="top">top</div>
-      <div class="bottom">bottom</div>
-    </div>
-  </b-row>
+  <div class="home">
+
+  </div>
 </template>
 
 <script>
@@ -33,10 +29,8 @@ export default {
       ]
     }
   },
-  mounted () {
-  },
-  methods: {
-  }
+  mounted () {},
+  methods: {}
 }
 </script>
 
